@@ -19,6 +19,52 @@
 
 [.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
+Reduce first argument a callback. second argument - intialValue
+
+### Examples 
+__count all instances in an array__
+
+```
+var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+var countedNames = names.reduce(function(allNames, name) {
+  if (name in allNames) {
+    allNames[name]++;
+  } else {
+    allNames[name] = 1;
+  }
+  return allNames;
+}, {});
+
+console.log(countedNames);
+```
+
+__Group by a property from an array objects__
+
+```
+var people = [
+  { name: 'Alice', age: 21 },
+  { name: 'Max', age: 20 },
+  { name: 'Jane', age: 20 }
+];
+
+function groupBy(objectArray, property) {
+  return objectArray.reduce(function(acc, obj) {
+    var key = obj[property];
+    console.log('key: ',key);
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+    acc[key].push(obj);
+    return acc;
+  }, {});
+}
+
+var groupPeople = groupBy(people, 'age');
+
+console.log(groupPeople);
+```
+
 ---
 
     Array.prototype.sort()
