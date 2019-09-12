@@ -25,6 +25,15 @@ fetches refs (branches and / or tags) for a repository, along with all objects n
 git fetch
 ```
 ---
+
+## Merge
+
+Stop a merge halfway through. 
+
+```
+git merge --abort
+```
+
 ## Stash
 
 
