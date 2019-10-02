@@ -23,7 +23,9 @@ promise().then(() => {
 ## States of a promise
 
 `resolved`
+
 `rejected`
+
 `pending`
 
 ## Consumers 
@@ -58,3 +60,10 @@ it handles errors once the promise is rejected
 The function passed to `.finally` always runs when the promise is settled be it resolve or reject. 
 
 Its useful for performing clean-up. 
+
+
+### Promise.race
+
+takes an array of promises and returns the fastest to resolve first
+If you pass an array the promise will forever be pending.
+Not commonly used but a use case might be timeout function
