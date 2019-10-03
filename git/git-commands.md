@@ -11,11 +11,15 @@ git add -p
 ---
 ## Branch 
 
-`git branch -r` - only remote branches
+[list remote branches](http://gitready.com/intermediate/2009/02/13/list-remote-branches.html)
 
 `git branch -a` - all branches 
 
-[list remote branches](http://gitready.com/intermediate/2009/02/13/list-remote-branches.html)
+`git branch -r` - only remote branches
+
+`git branch -D branchName` - delete local branch
+
+`git branch -m oldName newName` - rename branch
 
 ---
 ## Fetch 

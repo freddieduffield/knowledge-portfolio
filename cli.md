@@ -1,0 +1,1 @@
+`mv ~/fred/wrongName ~/fred/rightName`  re-name file / folder
