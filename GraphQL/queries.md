@@ -1,4 +1,6 @@
-# GraphQL queries
+# GraphQL
+
+## Queries
 
 GraphQl is a query language that creates a graph of data
 
@@ -14,6 +16,35 @@ query stuff {
   }
 }
 ```
+
+---
+
+## Mutations
+
+a mutation is a way modifying your graph
+
+```graphql
+mutation createRestaurant {
+  createRestaurant(
+    input: {
+      name: "Jah Krishna"
+      description: "My favourite. Vegatarian Indian"
+      city: "North London"
+    }
+  ) {
+    id
+    name
+    description
+    city
+  }
+}
+```
+
+---
+
+## Subscriptions
+
+listen for to changes made to API
 
 # Schemas
 
