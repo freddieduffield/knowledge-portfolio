@@ -61,6 +61,10 @@ The function passed to `.finally` always runs when the promise is settled be it 
 
 Its useful for performing clean-up. 
 
+### .all 
+
+resolves when all the promises passed to resolve
+
 
 ### Promise.race
 
