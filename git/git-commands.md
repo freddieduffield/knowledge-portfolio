@@ -37,7 +37,15 @@ Stop a merge halfway through.
 ```
 git merge --abort
 ```
+---
+## Rebase
+brings branch upto date with specificed branch. eg. adds changes made on feature branch to the end of the changes made to master.
 
+```
+git rebase master
+```
+
+---
 ## Stash
 
 
