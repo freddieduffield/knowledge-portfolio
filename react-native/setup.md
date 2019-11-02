@@ -18,3 +18,9 @@ cd ios && pod install
 to specfic the iPhone simulator...
 
     react-native run-ios --simulator="iPhone 8"
+
+## in the ios simulator
+
+`cmd + d` - pops open the developer menu
+
+`cmd + r` - refreshes app
