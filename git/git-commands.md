@@ -29,6 +29,15 @@ fetches refs (branches and / or tags) for a repository, along with all objects n
 git fetch
 ```
 ---
+## Log
+
+Get a graph of commit history, helpful with merges etc. 
+
+```
+git log --graph --decorate --all
+```
+
+---
 
 ## Merge
 
