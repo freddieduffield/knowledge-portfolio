@@ -82,3 +82,11 @@ Pushing to a new git hub repo (create repo on git hub first)
 git remote add origin git@github.com:FrederickFoxxx/knowledge-portfolio.git
 git push -u origin master
 ```
+---
+## Misc
+
+Link to a specific commit or branch from package json 
+
+```zsh
+npm install --save username/repo#branch-name-or-commit-or-tag
+```
