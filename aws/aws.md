@@ -32,7 +32,6 @@ set up MFA
 ## Load Balancing 
 
 
-
 ---
 
 ## SNS : Simple Notification Service
@@ -45,6 +44,20 @@ a web service that manages the delivery or sending of messages to subscribing en
 - subscribers (consumers)
 
 Topic - logical access point and communication channel.
+
+---
+## Elasticache 
+
+fully managed redis and memcached 
+
+--- 
+## Memcached 
+
+in memory data store. 
+Keeps data in memory rather than writing to disk. quick access to data. 
+Multi threaded scale up compute capcity. 
+
+
 
 ## CloudWatch
 
