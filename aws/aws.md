@@ -57,7 +57,11 @@ in memory data store.
 Keeps data in memory rather than writing to disk. quick access to data. 
 Multi threaded scale up compute capcity. 
 
+--- 
 
+## AWS Lambda
+
+---
 
 ## CloudWatch
 
@@ -65,7 +69,6 @@ Provides data and actionable insights to monitor applications.
 
 ## DynamoDB
 
-## Lambda
 
 ## Amplify
 

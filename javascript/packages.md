@@ -35,6 +35,21 @@ axios.all([
 
 * __throttle__
 
+invokes a function every x number of seconds
+
+* __chunk__
+
+creates an array of elements of an array to length of a given size 
+
+```js
+_.chunk(['a', 'b', 'c', 'd'], 2);
+// => [['a', 'b'], ['c', 'd']]
+ 
+_.chunk(['a', 'b', 'c', 'd'], 3);
+// => [['a', 'b', 'c'], ['d']]
+```
+
+
 
 
 ## [Backstop.js](https://github.com/garris/BackstopJS)
