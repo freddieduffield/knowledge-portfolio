@@ -18,6 +18,8 @@
 
 ## 3. break it down
 
+Explicitly write down the steps you need to take 
+
 ## 4. solve or simplify
 
 ## 5. look back and refactor
