@@ -64,6 +64,31 @@ function same(arr1, arr2) {
 }
 ```
 
+Write a function that accepts a variable number of arguments and checks to see if any of the arguments are duplicates
+
+```js
+function areThereDuplicates() {
+    // Create an object to count values 
+    let collection = {};
+    
+    // loop over values
+    for(let val in arguments) {
+        // if the value exists in the counting object + 1
+        // or add the value to the counting object with value of 1
+       collection[arguments[val]] ? collection[arguments[val]] += 1 : collection[arguments[val]] = 1;
+    }
+    
+    // loop over the collections object
+    for (let key in collection) {
+        // write condition that the functions is looking for
+        if  (collection[key] > 1) return true
+    }
+    
+    // return the opposite boolean to the one in the above statement
+    return false;
+}
+```
+
 ### Multiple Pointer 
 "Create pointers or values that correspond to an index or position and move towards the begining, end or middle based on a certain condition." 
 
