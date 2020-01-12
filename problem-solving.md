@@ -54,4 +54,32 @@ function sumZero(arr) {
 sumZero([-4, -3, -2, -1, 0, 1, 2, 3, 10])
 ```
 
+### Sliding Window
 
+to calculate a total or to find a sequence of a given number of items in a sequence 
+
+```js
+function maxSubarraySum(arr, num) {
+  let maxSum = 0; 
+  let tempSum = 0;
+  if (arr.length < num) return null
+
+  // add up the first numbers to the given amount 
+  for(let i = 0; i < num; i++) {
+    maxSum += arr[i]
+  }
+
+  tempSum = maxSum 
+
+// starting from where you left off 
+  for(let i = num; i < arr.length; i++) {
+    // take the last sum, minus the first item and add the last item
+    tempSum = tempSum - arr[i - num] + arr[i];
+    // evaluate which is highest 
+    maxSum = Math.max(maxSum, tempSum);
+
+    return maxSum;
+  }
+
+}
+```

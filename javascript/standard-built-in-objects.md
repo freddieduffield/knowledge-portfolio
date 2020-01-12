@@ -1,5 +1,9 @@
 # Standard Built in Objects 
 
+## Math 
+
+`.max()`  :  return the largest of 0 or more numbers
+
 ## Proxy 
 
 
@@ -24,3 +28,4 @@ p.b = undefined;
 console.log(p.a, p.b) // 1 , undefined
 console.log(p in c, p.c) // false , 37
 ```
+
