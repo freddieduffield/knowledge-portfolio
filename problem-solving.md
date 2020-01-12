@@ -92,6 +92,8 @@ sumZero([-4, -3, -2, -1, 0, 1, 2, 3, 10])
 
 ### Sliding Window
 
+"Create a window ... that depending on a certain condition, either increases or closes"
+
 to calculate a total or to find a sequence of a given number of items in a sequence 
 
 ```js
@@ -116,6 +118,18 @@ function maxSubarraySum(arr, num) {
 
     return maxSum;
   }
-
 }
 ```
+
+### Divide and Conquer
+
+Diving a data set into smaller chunks and then repeating a process with a subset of data.
+
+eg. binary search 
+
+with a sorted array
+* Pick middle
+* is it higher or lower?
+* if lower, find the middle of lower half and vice versa
+* continue until value found or it is certain it doesn't exist
+
