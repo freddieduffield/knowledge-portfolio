@@ -1,8 +1,19 @@
 # Standard Built in Objects 
 
 ## Math 
+|||
+|---|---|
+|`.max()` | return the largest of 0 or more numbers |
+| `.round()` | returns the value of a number to the nearest integer | 
 
-`.max()`  :  return the largest of 0 or more numbers
+
+## Number 
+
+||||
+|---|---|---|
+|`.parseFloat` | parses a string argument and returns a floating point | 
+|`Number.protoype.toFixed()`| formats a number to using fixed point notation | `Number.parseFloat(x).toFixed(2)`
+
 
 ## Proxy 
 
