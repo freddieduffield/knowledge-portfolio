@@ -1,6 +1,6 @@
 # SDKman 
 
-check **current** version 
+check **Current** version 
 
 ```
 sdk c
