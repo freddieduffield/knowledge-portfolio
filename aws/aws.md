@@ -17,9 +17,10 @@ arn:partition:service:region:account-id:resource-id
 ---
 
 ## IAM (identity and access management)
+
 - Users (1 per person)
 - roles (1 per app)
-- groups 
+- groups
 
 permission polices in JSON
 
@@ -29,8 +30,7 @@ set up MFA
 
 ---
 
-## Load Balancing 
-
+## Load Balancing
 
 ---
 
@@ -46,20 +46,24 @@ a web service that manages the delivery or sending of messages to subscribing en
 Topic - logical access point and communication channel.
 
 ---
-## Elasticache 
 
-fully managed redis and memcached 
+## Elasticache
 
---- 
-## Memcached 
+fully managed redis and memcached
 
-in memory data store. 
-Keeps data in memory rather than writing to disk. quick access to data. 
-Multi threaded scale up compute capcity. 
+---
 
---- 
+## Memcached
+
+in memory data store.
+Keeps data in memory rather than writing to disk. quick access to data.
+Multi threaded scale up compute capcity.
+
+---
 
 ## AWS Lambda
+
+an lambda is essential a function the is excuted only when desired so to save cloud compute.
 
 ---
 
@@ -68,7 +72,6 @@ Multi threaded scale up compute capcity.
 Provides data and actionable insights to monitor applications.
 
 ## DynamoDB
-
 
 ## Amplify
 
