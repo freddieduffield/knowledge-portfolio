@@ -13,3 +13,5 @@
 
 `cmd + r` : replace 
 
+`cmd + d` : copy line
+
