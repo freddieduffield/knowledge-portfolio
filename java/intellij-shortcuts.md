@@ -15,3 +15,5 @@
 
 `cmd + d` : copy line
 
+`shift + cmd + 8` then `shift + up` or `shift + down` : column mode multi cursors
+

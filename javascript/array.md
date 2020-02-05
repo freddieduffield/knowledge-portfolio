@@ -1,4 +1,4 @@
-# JavaScript
+# Arrays
 
 .shift
 
@@ -141,3 +141,34 @@ returns the first index of a given example.
     
     array.indexOf('Fred')
     // returns 0
+
+---
+
+    Array.prototype.lastIndexOf()
+
+[.lastIndexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)
+
+    array.lastIndexOf('Fred')
+    // returns 0
+
+---    
+
+Together `indexOf` and `lastIndexOf` can be used to identify duplicates or unique values...
+
+```JS
+
+const array = ['Fred', 'is', 'named', 'Fred'];
+
+console.log(array.indexOf('Fred'));
+// 0
+
+console.log(array.lastIndexOf('Fred'));
+// 3
+
+array.indexOf('Fred') !== array.lastIndexOf('Fred');
+//true
+
+array.indexOf('is') !== array.lastIndexOf('is');
+// false
+
+```
