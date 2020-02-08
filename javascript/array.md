@@ -4,7 +4,6 @@
 
 .includes
 
-
 ## Global Objects :
 
 ## **Array**
@@ -21,10 +20,11 @@
 
 Reduce first argument a callback. second argument - intialValue
 
-### Examples 
-__count all instances in an array__
+### Examples
 
-```
+**count all instances in an array**
+
+```js
 var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
 
 var countedNames = names.reduce(function(allNames, name) {
@@ -39,9 +39,9 @@ var countedNames = names.reduce(function(allNames, name) {
 console.log(countedNames);
 ```
 
-__Group by a property from an array objects__
+**Group by a property from an array objects**
 
-```
+```js
 var people = [
   { name: 'Alice', age: 21 },
   { name: 'Max', age: 20 },
@@ -51,7 +51,7 @@ var people = [
 function groupBy(objectArray, property) {
   return objectArray.reduce(function(acc, obj) {
     var key = obj[property];
-    console.log('key: ',key);
+    console.log('key: ', key);
     if (!acc[key]) {
       acc[key] = [];
     }
@@ -104,23 +104,24 @@ return odd numbers from an array
 `array.filter(x => x % 2 )`
 
 ---
+
     Array.prototype.slice()
 
 [.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
-```
-const array = ['Fred', 'is', 'cool']
-array.slice(1)
+```js
+const array = ['Fred', 'is', 'cool'];
+array.slice(1);
 // returns ['is', 'cool']
-array.slice(2)
+array.slice(2);
 // return ['cool']
 
-array.slice(-1) 
+array.slice(-1);
 // return ['cool']
-array.slice(-2)
+array.slice(-2);
 // returns ['is', 'cool']
 
-array.slice(0, 1)
+array.slice(0, 1);
 // returns ['Fred']
 ```
 
@@ -128,17 +129,16 @@ array.slice(0, 1)
 
 - A negative number with return the numbers from the end of the array
 
-- the first argument as start and the second agrument is end 
+- the first argument as start and the second agrument is end
 
 ---
+
     Array.prototype.indexOf()
 
 [.indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
+returns the first index of a given example.
 
-returns the first index of a given example. 
-
-    
     array.indexOf('Fred')
     // returns 0
 
@@ -151,7 +151,7 @@ returns the first index of a given example.
     array.lastIndexOf('Fred')
     // returns 0
 
----    
+---
 
 Together `indexOf` and `lastIndexOf` can be used to identify duplicates or unique values...
 
@@ -171,4 +171,22 @@ array.indexOf('Fred') !== array.lastIndexOf('Fred');
 array.indexOf('is') !== array.lastIndexOf('is');
 // false
 
+```
+
+## Heplers
+
+### get unique values
+
+```js
+const unique = [...new Set([1, 2, 3, 4, 1, 2])];
+console.log(unique);
+// [1, 2, 3, 4]
+```
+
+### Filter bad values
+
+```js
+const array = [undefined, 'chode', false, 12];
+array.filter(Boolean);
+// ['chode', 12]
 ```
