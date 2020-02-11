@@ -13,7 +13,11 @@
 
 `cmd + r` : replace 
 
-`cmd + d` : copy line
+`cmd + d` : duplicate current line
+
+`cmd + shift + up` : move line up
 
 `shift + cmd + 8` then `shift + up` or `shift + down` : column mode multi cursors
+
+`option + enter` when lightbulb shows, view corrections
 
