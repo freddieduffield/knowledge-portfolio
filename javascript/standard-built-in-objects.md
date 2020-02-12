@@ -1,5 +1,33 @@
 # Standard Built in Objects 
 
+## Error
+---
+thrown when runtime errors occur.
+
+the global `Error` object contains no methods of its own - it inherits from the prototype chain. 
+
+Throw a generic error
+
+```js
+try {
+  throw new Error('Whoops!');
+} catch(e) {
+  console.error(e.name + ': ' + e.message); 
+}
+```
+
+
+### Types of Error 
+|Error|Description|
+|---|---|---|
+|`EvalError`| creates an instance respresenting an error that occurs regarding the global function `eval()` |
+|`InternalError`| Creates an instnace representing an error that occurs when an internal error in the Javascript engine occurs|
+|`RangeError`|Creates an instance representing an error that occurs when de-referencing an invalid |
+|`ReferenceError`||
+|`SyntaxError`||
+|`TypeError`||
+|`URIError`||
+
 ## Math 
 |||
 |---|---|
@@ -16,8 +44,7 @@
 
 
 ## Proxy 
-
-
+---
 The proxy object is used to define custom behaviour for fundemental operations (eg. property look-up, assignment, ennumeration, function invocation etc)
 
 Takes a `handler` and `target` parameters
