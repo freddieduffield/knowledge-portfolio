@@ -30,3 +30,26 @@ React.cloneElement(
   [...children]
 )
 ```
+
+## PropTypes
+
+```js
+
+nameOfComponent.propTypes = { // lowercase
+  nameOfProp: PropTypes.string //uppercase 
+}
+```
+modifiers: 
+__oneOf__
+```js
+PropTypes.oneOf(['value', 'of', 'prop'])
+```
+__shape__
+```js
+Proptypes.shape({
+  usageOrigin: PropTypes.string,
+  usageZone: PropTypes.string,
+  usageIsEmbed: PropTypes.string,
+  usageSrcfr: PropTypes.string,
+});
+```
