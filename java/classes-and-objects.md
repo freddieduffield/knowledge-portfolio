@@ -36,7 +36,7 @@ Class Rectangle {
 - instance variables defined a top class
 - local variables - local to method, doesn't exist after execution
 
-## Constructors
+### Constructors
 
 constructors same name as class
 
@@ -61,10 +61,7 @@ Class Film {
 
 if a constructor is defined all arguments must be passed for it to compile properly.
 
-
-`declaration of`int` defaults to 0
-
-- instantiating an object
+### instantiating an object
 
   `Movie movie1 = new Movie(1999, 100);`
 
