@@ -30,8 +30,10 @@ axios.all([
 // => Date created:  2017-04-03T17:25:46Z
 ```
 
-
+---
 ## Lodash
+
+[documentation](https://lodash.com/docs/4.17.15)
 
 * __throttle__
 
@@ -48,9 +50,20 @@ _.chunk(['a', 'b', 'c', 'd'], 2);
 _.chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
 ```
+* __get__
 
+gets the value at the path of the object. 
 
+parameters : object, path, default value (returned if `undefined`)
 
+```js
+var object = { 'a': [{'b': {'c': 3}}]}
+
+_.get(object, 'a[0].b.c')
+// 3
+```
+
+---
 
 ## [Backstop.js](https://github.com/garris/BackstopJS)
 
