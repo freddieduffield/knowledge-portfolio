@@ -65,3 +65,12 @@ public class Main {
 ```
 
 
+---
+org.apache.commons.lang3
+
+### StringUtils
+
+```java
+String exampleString = "hello"
+StringUtils.isNotBlank(exampleString); 
+```

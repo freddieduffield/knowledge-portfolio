@@ -1,7 +1,7 @@
 # Methods
 ### Method definition
 
-- parameter - define type
+- parameter - define type 
 - `void` in the following example is the return type -
   you must define type returned. `void` is an instance where nothing returned
 
