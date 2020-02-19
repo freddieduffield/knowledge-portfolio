@@ -74,3 +74,14 @@ org.apache.commons.lang3
 String exampleString = "hello"
 StringUtils.isNotBlank(exampleString); 
 ```
+---
+
+`javax.ws.rs.core`
+
+## UriBuilder 
+
+Uri template aware utility class for building URIs from there components
+
+
+    queryParam(java.lang.String name, java.lang.Object... values)
+          Append a query parameter to the existing set of query parameters.

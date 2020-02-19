@@ -44,6 +44,14 @@ a web service that manages the delivery or sending of messages to subscribing en
 - subscribers (consumers)
 
 Topic - logical access point and communication channel.
+---
+## SQS 
+
+Simple Queue Service
+
+### DLQ
+
+Dead letter queue isolates problematic messages 
 
 ---
 
