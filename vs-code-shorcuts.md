@@ -12,4 +12,7 @@ keystrokes | action
 keystrokes | action
 |---|:---:|
 `cmd + b` |  toogle side panel
+`ctrl + r`|  open recent (use for switch between open projects)
+`ctrl + w`|  switch between workspaces
+
 
