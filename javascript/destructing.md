@@ -72,7 +72,28 @@ var prop = 'name';
 var { [prop]: fred} = {name: 'frederick'}; 
 console.log(fred) // -> frederick
 ```
+nesting object destructoring 
+```js
 
+const person = {
+  name: 'Fred',
+  place: {
+    country: 'England',
+    city: 'Great Yarmouth'
+  }
+}
+
+const { name: firstname, 
+  place: {
+    country: land,
+    city: town
+  }
+}
+
+console.log(firstname) // -> fred
+console.log(land) // -> England
+console.log(town) // -> Great Yarmouth
+```
 rest of the object
 
 ```js
