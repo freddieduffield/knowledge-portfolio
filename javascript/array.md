@@ -173,6 +173,14 @@ array.indexOf('is') !== array.lastIndexOf('is');
 
 ```
 
+## Destructing Arrays
+
+```js
+const [greeting, ,,, name] = ['hello', 'my', 'name', 'is', 'Freddie']
+console.log(greeting, name)
+// -> hello Freddie
+```
+
 ## Heplers
 
 ### get unique values
@@ -186,7 +194,9 @@ console.log(unique);
 ### Filter bad values
 
 ```js
-const array = [undefined, 'chode', false, 12];
+const array = [undefined, 'chode', false, '', 12];
 array.filter(Boolean);
 // ['chode', 12]
 ```
+
+
