@@ -10,7 +10,13 @@ __found__
 
 The target resource resides temporarily under a different URI. Since the redirection might be altered on occasion, the client ought to continue to use the effective request URI for future requests.
 
+# 502 
+
+__Bad Gateway__
+
+the server whilst adding as a gateway or a proxy recieved an invalid response from the upstream server. 
+
 # 504 
-__Getway timeout error__
+__Gateway Timeout__
 
 The server, while acting as a gateway or proxy, did not receive a timely response from an upstream server it needed to access in order to complete the request.

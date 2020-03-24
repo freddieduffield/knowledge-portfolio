@@ -78,7 +78,7 @@ nesting object destructoring
 const person = {
   name: 'Fred',
   place: {
-    country: 'England',
+    country: 'Engl and',
     city: 'Great Yarmouth'
   }
 }

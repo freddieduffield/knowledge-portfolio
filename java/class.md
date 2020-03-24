@@ -6,12 +6,21 @@
 
 used to log messages 
 
+**Predicate**
+
+`java.util.function.predicate<T>`
+
+a functional interface that can be used as a target assignment for a lambda expression. Takes a single input and returns a boolean
+
 **Optional**
 
 `java.util.Optional<T>`
 
 A container object which may or may not contain a non-null value.
 
+**Set**
+
+interface that extends collection - unordered collection of objects of which duplicates can't be stored
 
 java.util.Collections;
 
@@ -20,6 +29,7 @@ java.util.HashMap;
 java.util.List;
 
 java.util.Map;
+
 
 ---
 

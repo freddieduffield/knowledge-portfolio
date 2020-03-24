@@ -3,6 +3,16 @@
 ## [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 ...copies all enumerable own properties from one or more source objects into a target object. returns target object. 
 
+merging objects... 
+```js
+const falafel = {name: 'iFalafel', price: 350 }
+const location = {street: 'middlesex Street', market: 'Petticoat lane'}
+
+const iFalafelData = Object.assign(falafel, location); 
+
+console.log(iFalafelData);
+```
+
 __parameters:__ 
 * target
 * sources
