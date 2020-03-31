@@ -53,6 +53,13 @@ brings branch upto date with specificed branch. eg. adds changes made on feature
 ```
 git rebase master
 ```
+---
+## Reset
+when someone has made an ammendment to a commit and you pull the branch and get a merge conflict 
+
+```bash 
+git reset --hard origin/branchName
+```
 
 ---
 ## Stash
