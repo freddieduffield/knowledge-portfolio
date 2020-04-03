@@ -22,13 +22,18 @@ A container object which may or may not contain a non-null value.
 
 interface that extends collection - unordered collection of objects of which duplicates can't be stored
 
+**Map**
+
+`java.util.Map;`
+
+Object that maps keys to values, cannot contain duplicate keys, each must contain at least 1 value. 
+
 java.util.Collections;
 
 java.util.HashMap;
 
 java.util.List;
 
-java.util.Map;
 
 
 ---

@@ -89,6 +89,15 @@ When your provide a different implementation in
 
 ## Interfaces
 
+Java does not allow multiple inheritance. 
+* 100% abstract class and has only abstract
+* class implement any number of interfaces 
+
+Dog extends class animal
+and has the interface pet 
+
+ 
+
 you only provide signature.
 
 ```java
