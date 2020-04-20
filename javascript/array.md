@@ -4,17 +4,27 @@
 
 .includes
 
-## Global Objects :
+## Array.prototype.filter()
 
-## **Array**
+[.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
-    Array.prototype.forEach()
+- filter takes a condition and returns an array with the items for which the condition returns true
+
+**Helpers**
+
+return odd numbers from an array
+
+`array.filter(x => x % 2 )`
+
+---
+
+## Array.prototype.forEach()
 
 [.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
 ---
 
-    Array.prototype.reduce()
+## Array.prototype.reduce()
 
 [.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
@@ -66,8 +76,16 @@ console.log(groupPeople);
 ```
 
 ---
+## Array.prototype.some()
 
-    Array.prototype.sort()
+[.some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+
+tests if at least 1 item appears in an array 
+returns a boolean
+
+---
+
+## Array.prototype.sort()
 
 [.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
@@ -91,21 +109,7 @@ sort highest to lowest (descending)
 
 ---
 
-    Array.prototype.filter()
-
-[.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-
-- filter takes a condition and returns an array with the items for which the condition returns true
-
-**Helpers**
-
-return odd numbers from an array
-
-`array.filter(x => x % 2 )`
-
----
-
-    Array.prototype.slice()
+## Array.prototype.slice()
 
 [.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
@@ -133,7 +137,7 @@ array.slice(0, 1);
 
 ---
 
-    Array.prototype.indexOf()
+## Array.prototype.indexOf()
 
 [.indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
