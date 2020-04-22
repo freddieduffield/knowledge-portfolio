@@ -21,3 +21,14 @@ Lambda
 - integrated with many programming languages 
 - Easy monitoring with CloudWatch
 - Easy to get more resources per functions
+
+
+## Reuse S3 connections
+
+https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html
+https://aws.amazon.com/blogs/compute/container-reuse-in-lambda/
+https://medium.com/capital-one-tech/best-practices-for-aws-lambda-container-reuse-6ec45c74b67e
+https://www.jeremydaly.com/reuse-database-connections-aws-lambda/
+https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html
+https://winterwindsoftware.com/fff-function-initialisation/
+https://medium.com/capital-one-tech/best-practices-for-aws-lambda-container-reuse-6ec45c74b67e
