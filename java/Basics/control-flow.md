@@ -1,5 +1,18 @@
 # Control Flow 
 
+## for
+
+```java
+for(int i=0; i<5; I++) {
+  // do stuff 
+}
+// or
+int arr[] = {1,2,3};
+for(int i: arr) {
+  //code 
+}
+```
+
 ## Switch 
 
 ```java
@@ -21,19 +34,12 @@ switch(switchValue) {
 }
 ```
 
-
-
-## for
+## ternary 
 
 ```java
-for(int i=0; i<5; I++) {
-  // do stuff 
-}
-// or
-int arr[] = {1,2,3};
-for(int i: arr) {
-  //code 
-}
+final String = num > 10 
+  ? "number greater than 10"
+  : "number less than 10";
 ```
 
 ## While & Do While
