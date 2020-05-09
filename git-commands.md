@@ -64,7 +64,6 @@ git reset --hard origin/branchName
 ---
 ## Stash
 
-
 ```
 git stash
 ```

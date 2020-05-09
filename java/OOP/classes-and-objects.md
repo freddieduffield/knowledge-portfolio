@@ -127,4 +127,3 @@ class dog extends animal {
 - usually used for operations that require any data from an instance of class
 
 ![](static-or-instance.png)
-
