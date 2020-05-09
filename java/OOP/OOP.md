@@ -96,6 +96,8 @@ You can have multiple constructors, with the same name but with different number
 
 ## Inheritance 
 
+`is-a` relationship
+
 - a class can extend a parent class - eg. animal is a type of dog 
   - a dog extends the class of animal
 
@@ -119,11 +121,75 @@ class dog extends animal {
   * can't have a lower access modifier
 * only inherited methods can be overwritten
 * Constructors and private methods cannot be overridden
+## non access modifiers
 
-## Static methods
+## final 
+
+ **final** is a constant - its immutable.
+  `final int = 123`
+
+  - stop method overidding
+
+  - stop value change
+
+  - stop inheritance 
+
+### Static methods
 
 - declared using the static modifier
 - can't access instance methods or variables 
 - usually used for operations that require any data from an instance of class
 
 ![](static-or-instance.png)
+
+## composition
+
+`has-a` relationship
+
+e.g. a house has rooms. 
+
+```java
+class Job {
+  privte int salary; 
+
+  public Job(int salary) {
+    this.salary = salary; 
+  }
+
+  public int getSalary() {
+    return salary; 
+  }
+
+  public setSalary(int salary) {
+    this.salary = salary; 
+  }
+} 
+```
+
+A person `has-a` job. 
+
+``` java
+class Person {
+  private Job job; 
+
+  public Job(Job job) {
+    this.job = new Job(1000000);
+  }
+
+  public Job getJob() {
+    return job; 
+  }
+
+  public void setJob(Job job) {
+    this.job = job; 
+  }
+
+  public int getSalary() {
+    return job.getSalary(); 
+  }
+}
+```
+
+## encapsulation 
+
+## Polymorphism
