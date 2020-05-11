@@ -192,4 +192,16 @@ class Person {
 
 ## encapsulation 
 
+`data-hiding`
+
+- declare variables of a class as private 
+- provide public getters and setters
+
 ## Polymorphism
+
+`many-forms`
+
+- common use: parent class reference to children
+- two type compile time and run time 
+- can be performed by `method-overloading` and `method-overiding` 
+- 

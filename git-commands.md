@@ -22,6 +22,20 @@ git add -p
 `git branch -m oldName newName` - rename branch
 
 ---
+## Commit
+
+change last commit message 
+```
+git commit --amend 
+```
+
+add staged edits to previous commit without changing the commit message
+```
+git commit --amend --no-edit
+```
+
+
+---
 ## Fetch 
 fetches refs (branches and / or tags) for a repository, along with all objects needed to complete their histories
 
