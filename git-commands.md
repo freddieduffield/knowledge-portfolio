@@ -34,6 +34,13 @@ add staged edits to previous commit without changing the commit message
 git commit --amend --no-edit
 ```
 
+---
+## Diff
+
+compare a file on different two branches
+```
+git diff mybranch master -- myfile.js
+```
 
 ---
 ## Fetch 
