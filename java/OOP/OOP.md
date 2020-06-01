@@ -138,7 +138,9 @@ class dog extends animal {
 
 - declared using the static modifier
 - can't access instance methods or variables 
-- usually used for operations that require any data from an instance of class
+- usually used for operations that don't require any data from an instance of class
+
+Static variables are attached to every instance of a class.
 
 ![](static-or-instance.png)
 

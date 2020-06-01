@@ -25,19 +25,7 @@ byte myNewByteValue = (byte) (myMinIntValue / 2);
 ## Special 
 ----
 
-**String** 
 
-is a class, a sequence of characters. Strings are immutable.
-StringBuffer 
-
-comparing strings 
-
-```java
-String exampleString = "hello"
-
-exampleString.equals("hello")
-// true
-```
 
 ---
 **enum** 
