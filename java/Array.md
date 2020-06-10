@@ -31,6 +31,13 @@ int[] myIntArray = { 1, 2, 3, 5, 6, 7, 8, 9, 10 };
    }
    ```
 
+   ### Print an array
+
+   ```java
+   int[] primes = {5, 7, 11, 17};
+   System.out.println(Arrays.toString(primes));
+   ```
+
    # ArrayList 
 
 
@@ -74,6 +81,17 @@ listName.indexOf(item);
 ## Autoboxing & unboxing 
 ArrayList can only be created of classes not primative types. for primative types you need to use wrapper class. 
 
+**Autoboxing** 
+Converting primative to wrapper class. 
+occurs when a primative value is: 
+* passed as a parameter to a method that expects an object of a corresponding wrapper class
+* Assigned to a variable of the corresponding wrapper class.  
+
+**Unboxing** 
+converting object of a wrapper type to primative. Occurs when: 
+* passed parameter that expects value of corressponding primative type
+* Assigned to a variable of the corresponding primative type. 
+
 ```java
 // Creating ArrayList with wrapper class
 ArrayList<Integer> intArrayList = new ArrayList<Integer>();
@@ -91,3 +109,42 @@ for(int i=0; i <=10; i++) {
 Integer myIntValue = 56; // Integer.valueOf(56)
 int myInt = myIntValue.intValue(); // myInt.intValue()
 ```
+
+## Helpers
+### Convert Array of Strings to ArrayList
+1. `asList`
+```java
+import java.util.Arrays; 
+
+String[] array ={"a", "b", "c"};
+List<String> newList = Arrays.asList(array); 
+```
+note: Doesn't work for primatives, no auto boxing 
+
+2. `addAll`
+
+```java
+import java.util.Collections; 
+
+String[] array ={"a", "b", "c"};
+List<String> list = new ArrayList<>(); 
+Collections.addAll(list, array); 
+```
+3. `for` (does autoboxing??)
+```java
+List<String> list = new ArrayList<>();
+String[] array ={"a", "b", "c"};
+for(String text:array) {
+  list.add(text); 
+}
+```
+
+### convert `int[]` to ArrayList
+```java
+int[] ints = {1, 2, 3}; 
+List<Integer> intList = new ArrayList<Integer>(ints.length); 
+for(int i : ints) {
+  intList.add(i); 
+}
+```
+

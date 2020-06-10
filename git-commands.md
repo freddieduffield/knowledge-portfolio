@@ -82,6 +82,12 @@ when someone has made an ammendment to a commit and you pull the branch and get 
 git reset --hard origin/branchName
 ```
 
+--- 
+## Revert
+
+
+
+
 ---
 ## Stash
 

@@ -97,6 +97,7 @@ StringUtils.isNotBlank(exampleString);
 
 Uri template aware utility class for building URIs from there components
 
-
-    queryParam(java.lang.String name, java.lang.Object... values)
-          Append a query parameter to the existing set of query parameters.
+```java
+queryParam(java.lang.String name, java.lang.Object... values)
+```
+Append a query parameter to the existing set of query parameters.
