@@ -128,11 +128,11 @@ class dog extends animal {
  **final** is a constant - its immutable.
   `final int = 123`
 
-  - stop method overidding
+  - stops method overidding
 
-  - stop value change
+  - stops value change
 
-  - stop inheritance 
+  - stops inheritance 
 
 ### Static methods
 
