@@ -12,7 +12,7 @@ function promise() {
 
 The callback function that is passed to the promise constructor takes the parameters `resolve` and `reject`
 
-It is then possible to change `.then` on to the function call
+It is then possible to chain `.then` on to the function call
 
 ```javascript
 promise().then(() => {
@@ -66,7 +66,7 @@ Its useful for performing clean-up.
 Takes multiple promises a parameters and returns a single promise the is resolved when all promises are fulfilled. 
 resolves when all the promises passed to resolve.
 
-Makes requests in parallel, stops waterful and makes it much faster. 
+Makes requests in parallel, stops waterfall and makes it much faster. 
 
 ```JavaScript
 const promise = Promise.all([
@@ -96,5 +96,29 @@ takes an array of promises and returns the fastest to resolve first
 If you pass an array the promise will forever be pending.
 Not commonly used but a use case might be timeout function
 
+## Examples
 
+### Getting data out of a promise
+<!-- DON"T COMMIT -->
+```JS
+function getApplications() {
+var myHeaders = new Headers();
+myHeaders.append("X-Api-Key", "NRAA-1b27fa8c6e438872c76499dcd75");
+myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+return fetch("https://api.newrelic.com/v2/applications.json?filter[name]=sdtech-arp-local-eu-west-1", requestOptions)
+  .then(response => response.text())
+  .catch(error => console.log('error', error));
+}
+
+const { applications } = getApplications();
+
+console.log('variable: ', applications);
+```
  
