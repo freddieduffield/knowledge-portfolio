@@ -1,16 +1,22 @@
 ## cat
-* show contence of file 
-  ```sh
+* show contents of file 
+  ```Bash
+  cat myFile.txt
   ```
 * add text a file
-  ```sh
+  ```Bash
+  cat >> myFile.txt << EOF
+  ...type text...
+  EOF
   ```
 ## mv
 * rename file 
-```sh
+```Bash
+mv filename.txt newfilename.txt
 ```
 * move a file to a new directory
-  ```sh
+  ```Bash
+  mv ./Downloads/lecture-79-challenge.txt ./curriculum/1907-0208-2020
   ```
 
 ## touch 
@@ -37,3 +43,23 @@ echo $(pwd)/myFile.txt
 used to transform string or 
 
 ## "${STRING-INTERPOLATION}"
+
+## systemctl
+
+ to control the systemd system and service
+ 
+ Start / stop a service
+```bash
+sudo systemctl start mysql.service
+sudo systemctl stop mysql.service
+```
+
+## tail
+List the last few lines of a file particularily useful for log files
+ 
+```
+tail -f
+```
+
+## less
+displays paginated file output, can be navigated. Useful for large files

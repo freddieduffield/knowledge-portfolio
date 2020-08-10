@@ -10,6 +10,7 @@ git add -p
 ```
 ---
 ## Branch 
+`git branch` - list local branches
 
 [list remote branches](http://gitready.com/intermediate/2009/02/13/list-remote-branches.html)
 
