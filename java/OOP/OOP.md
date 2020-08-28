@@ -111,7 +111,7 @@ class dog extends animal {
   }
 }
 ```
-## Method overrding 
+## Method overriding 
 
 * defining a method in child class that already exists in the parent class 
 * called runtime time polymorphism and dynamic method dispatch
@@ -121,11 +121,19 @@ class dog extends animal {
   * can't have a lower access modifier
 * only inherited methods can be overwritten
 * Constructors and private methods cannot be overridden
+
 ## non access modifiers
 
-## final 
+### protected
 
- **final** is a constant - its immutable.
+`protected` an access modifier that enables a variable or method to accessed 
+* within the enclosing class
+* other classes in the same package as the enclosing class
+* sub classes regardless of packages. 
+
+### final 
+
+ `final` is a constant - its immutable.
   `final int = 123`
 
   - stops method overidding

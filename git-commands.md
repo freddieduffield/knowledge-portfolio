@@ -43,6 +43,12 @@ compare a file on different two branches
 git diff mybranch master -- myfile.js
 ```
 
+When there has been a revert compare the original and revert
+
+```
+git diff <original commit hash> origin/<commit hash of revert> 
+```
+
 ---
 ## Fetch 
 fetches refs (branches and / or tags) for a repository, along with all objects needed to complete their histories
