@@ -22,6 +22,14 @@
 
 `cmd + N`: open generator 
 
+`shift cmd  -` collapse all
+
+`shift cmd + ` expand all
+
+`cmd + ` expand block
+
+`cmd - ` collapse block
+ 
 ---
 # SDKman 
 

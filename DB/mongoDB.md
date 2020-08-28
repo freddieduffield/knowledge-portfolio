@@ -1,25 +1,27 @@
-# DataBases
-
 # MongoDB
 
 * Run mongoDB
 
 ```bash
 mongod --config /usr/local/etc/mongod.conf --fork
-or better to do
-
-    mongod
-
-
+```
+* or better to do
+```
+mongod
+```
 * Verify mongoDB is running 
 
-    ps aux | grep -v grep | grep mongod
-
+```
+ps aux | grep -v grep | grep mongod
+```
 
 * stop mongod running 
-
-    $ top 
+```
+ $ stop` 
+```
     
-    find PID
+* find PID
     
-    $ kill <PID>
+```
+$ kill <PID>
+```
