@@ -148,3 +148,10 @@ for(int i : ints) {
 }
 ```
 
+### Create an ArrayList populated with values
+```java
+   ArrayList<Integer> numbers = new ArrayList<>(
+                Arrays.asList(0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55)
+        );
+``` `
+
