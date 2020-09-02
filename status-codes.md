@@ -14,7 +14,7 @@ The target resource resides temporarily under a different URI. Since the redirec
 
 __Bad Gateway__
 
-the server whilst adding as a gateway or a proxy recieved an invalid response from the upstream server.
+the server whilst acting as a gateway or a proxy received an invalid response from the upstream server.
 
 # 503
 
