@@ -1,5 +1,5 @@
 # Functions
-
+`Function.length` is the number of parameters 
 ## the arguments object 
 
 [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
