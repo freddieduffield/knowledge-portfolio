@@ -4,9 +4,7 @@
 
 StringBuffer 
 
-**String** 
-
-is a class, a sequence of characters. Strings are immutable.
+**String** is a class, a sequence of characters. Strings are immutable.
 StringBuffer 
 
 ## comparing strings 

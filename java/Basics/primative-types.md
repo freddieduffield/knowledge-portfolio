@@ -23,11 +23,6 @@ byte myNewByteValue = (byte) (myMinIntValue / 2);
 ```
 
 ## Special 
-----
-
-
-
----
 **enum** 
 
 enables variable to be a set of predefined constants. 
