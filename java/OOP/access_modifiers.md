@@ -8,6 +8,12 @@ For hiding data and keeping it consistent across objects,
 
 Use getter and setters, instead of directly modifying values
 
+`public` - can be accessed from any other class anywhere, even ina different package
+
+`Package-private` - An object with no access modifier is visible to every class within the same package (but not classes in external packages)
+
+`private` - only visible within the class it is declared. it is not visible anywhere else (including sub classes of its class)
+
 ## non access modifiers
 
 ### protected
@@ -15,7 +21,7 @@ Use getter and setters, instead of directly modifying values
 `protected` an access modifier that enables a variable or method to accessed 
 * within the enclosing class
 * other classes in the same package as the enclosing class
-* sub classes regardless of packages. 
+* sub classes regardless of packages.  
 
 ### final 
 
