@@ -44,13 +44,40 @@ _class modifier, field modifier_
 
   - stops inheritance 
 
-### Static methods
+### Static 
 
-- declared using the static modifier
+- fields
+- methods
+- blocks
+- class
+
+*Belongs to the type itself, not any instance of that type* 
+- declared using the `static` modifier
 - you can call this method without instantiating an object. it does not require any state.
 - can't access instance methods or variables 
-- usually used for operations that don't require any data from an instance of class
+- usually used for operations that don't require any data from an instance of class.
+- Static variables are attached to every instance of a class.
+- if a field is declared static, then a *single* copy of that field is created and shared among all instance of that class.
+- in JVM they go in area called `Metaspace`
 
-Static variables are attached to every instance of a class.
+**Example**
+Count number of instances instantiated from class
+
+```java
+
+public class Car {
+    private String name; 
+    private String engine; 
+    
+    public static int numberOfCars;
+    
+    public Car(String name, String engine) {
+        this.name = name;
+        this.engine = engine;
+        numberOfCars++; 
+    }    
+
+}
+```
 
 ![](static-or-instance.png) 
