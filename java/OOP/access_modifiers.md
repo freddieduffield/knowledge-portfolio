@@ -1,10 +1,21 @@
-# Access Modifiers
+# Modifiers
+
+## Class Modifiers
+may be
+* `public`
+* either `abstract` or `final`
+
+
+- if a class is `final` no subclasses may be created.
+- an `abstract` class cannot be instantiated. 
+
+## Member Access Modifiers
 
 For hiding data and keeping it consistent across objects,
 
 - `private`
 - `public`
-- `default` - (used when no accessor is used)
+- `protected`
 
 Use getter and setters, instead of directly modifying values
 
@@ -14,10 +25,6 @@ Use getter and setters, instead of directly modifying values
 
 `private` - only visible within the class it is declared. it is not visible anywhere else (including sub classes of its class)
 
-## non access modifiers
-
-### protected
-
 `protected` an access modifier that enables a variable or method to accessed 
 * within the enclosing class
 * other classes in the same package as the enclosing class
@@ -25,9 +32,12 @@ Use getter and setters, instead of directly modifying values
 
 ### final 
 
- `final` is a constant - its immutable.
-  `final int = 123`
+_class modifier, field modifier_ 
 
+ `final` is a constant - you can't change the object's reference to point another reference, but you can still mutate its state. value shouldn't be changed once the initial value is set.
+  `final int = 123`
+  
+  
   - stops method overidding
 
   - stops value change
@@ -37,7 +47,7 @@ Use getter and setters, instead of directly modifying values
 ### Static methods
 
 - declared using the static modifier
-- you can call this method with out instantiating an object. it does not require any state.
+- you can call this method without instantiating an object. it does not require any state.
 - can't access instance methods or variables 
 - usually used for operations that don't require any data from an instance of class
 
