@@ -1,5 +1,6 @@
 # Collections
 
+
 ### The Problem with Arrays
 
 * fix size, need to make add and remove methods to add and remove
@@ -127,6 +128,19 @@ If you are looping over a collection with a for loop do not modify it. Use an it
 *performance comparision*
 
 ![](performance-comparison.png)
+
+## Collection List methods
+- `Collections.min(collectionVaribable)`
+    get smallest value
+- `Collections.max(collectionVaribable)`
+    get highest value
+- `Collections.reverse(collectionVariable)`
+    reverse the collection
+- `Collections.sort(collectionVariable, fieldToSortBy)`    
+- `Collections.shuffle(collectionVariable)`
+    shuffle order of elements
+- `Collections.swap(list, i, j)`
+    Swap the order of items via index
 ---
 ## Uniqueness: Sets
 
@@ -179,6 +193,4 @@ Sets are collections of distinct elements. There are no duplicates.
 
 ## Collections of Pairs: Maps
 
-## Collection Operations
-
-
+    
