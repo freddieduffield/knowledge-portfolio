@@ -21,6 +21,10 @@ like a dictionary, or objects in javascript - a set of key value pairs. Here is 
 * `mapName.keySet()`
     - returns a set view of the keys contained in the map. 
 
+* `mapName.replace(key, newValue)`
+    - replaces value
+    - returns replaced value.
+    
 ```java
 package com.freddieduffield;
 
