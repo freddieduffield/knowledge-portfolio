@@ -1,4 +1,4 @@
-# Maps
+# Maps *Collection of Pairs*
 
 like a dictionary, or objects in javascript - a set of key value pairs. Here is how you declare a map: 
 `Map<String, String> languages = new HashMap<>();`

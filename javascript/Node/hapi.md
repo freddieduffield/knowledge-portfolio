@@ -7,3 +7,8 @@
   - options : configuration to help plugin run
   - next : call this function when the configuration your plugin provides is done
 
+
+## Server
+
+### decorate 
+`server.decorate()` 
