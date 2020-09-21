@@ -18,6 +18,8 @@ Sets are collections of distinct elements. There are no duplicates. takes as sin
 * General purpose implementation
 * a hashcode is the unique identifier
 
+To ensure that a duplicate object is not added to the set, you can override the equals method. Duplication can happen because new duplicate object may created and stored in a different hash in memory. Items are only considered equal if the have the same hash. to optimise performance items are store in specific hashes. 
+
 **TreeSet**
 * based upon TreeMap
   * uses Binary Tree with a required sort order
