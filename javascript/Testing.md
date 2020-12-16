@@ -26,7 +26,6 @@ Replaces object.method with a stub function. An exception is thrown if the prope
 
 ### Spy
 
-Are stubs that check the value that are put in them.
-
+Are a special type of stub that collect the data on how the function is stubs is called. you can then check how many times it was called etc. 
 
 ## React Testing Library
