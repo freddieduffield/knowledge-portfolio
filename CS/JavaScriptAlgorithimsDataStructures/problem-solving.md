@@ -39,7 +39,7 @@ function same(arr1, arr2) {
     return false; 
   }
 
-  let frequencyCounter1 = {};
+  let frequencyCounter1 = {}; 
   let frequencyCounter2 = {};
 
   for(let val of arr1) {

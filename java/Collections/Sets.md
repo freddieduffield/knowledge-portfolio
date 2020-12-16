@@ -42,6 +42,9 @@ To ensure that a duplicate object is not added to the set, you can override the 
 * Provides way to move through 
 * implemented by treeset
 
+
+## Asymetric & Symetric 
+
 ## Modification Order: queues and deques 
 
 * first in, first out 

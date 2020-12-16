@@ -1,6 +1,10 @@
-# Sinon 
+# Testing
 
-## stubs
+## Jest 
+
+## Sinion / Mocha / Chai
+
+### stubs
 
 [https://sinonjs.org/releases/latest/stubs/](https://sinonjs.org/releases/latest/stubs/)
 
@@ -20,6 +24,9 @@ They are simple to get through the code. It doesn't do ant
 
 Replaces object.method with a stub function. An exception is thrown if the property is not already a function.
 
-## Spy
+### Spy
 
 Are stubs that check the value that are put in them.
+
+
+## React Testing Library

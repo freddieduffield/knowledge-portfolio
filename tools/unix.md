@@ -25,6 +25,8 @@ mv filename.txt newfilename.txt
 ## mkdir
 * create a directory 
 
+## Changing Access Permissions
+`chmod u+x` - make executable 
 
 # bash
 

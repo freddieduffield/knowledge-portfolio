@@ -21,6 +21,9 @@ like a dictionary, or objects in javascript - a set of key value pairs. Here is 
 * `mapName.keySet()`
     - returns a set view of the keys contained in the map. 
 
+* `mapName.entrySet()`
+  - returns all the entries
+
 * `mapName.replace(key, newValue)`
     - replaces value
     - returns replaced value.

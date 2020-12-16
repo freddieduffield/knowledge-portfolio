@@ -5,7 +5,17 @@
 StringBuffer 
 
 **String** is a class, a sequence of characters. Strings are immutable.
-StringBuffer 
+StringBuffer can be used to create a mutable string 
+
+* `s1.length()` returns an `int` equal to the number of characters
+* `s1.equals(s2)` returns an `boolean`,  `true` if contains the same sequence of characters equalsIgnoreCase doesn’t distinguish upper and lower case
+* S1.charAt(I) char at position of I counting from 0. If I less than 0  or greater than or equal to s1.lenght throws StringIndexOutOfBounds
+* s1.toString string same obj as s1
+* String.valueOf(v) string representation of v. when v has reference type converted using toString. Every object  has a toString method that can be overridden
+* S1 + s2 same as s1.concat(s2) creates new string
+* S1.compareTo(s2) returns negative integer zero or positive according to lexiciographical ordering based on Unicode 1
+* S1.substring(int I, int j) returns a new string with character between the 2 indexes
+* S1.subsequence(int I, int j) returns a charsequence
 
 ## comparing strings 
 

@@ -1,4 +1,4 @@
-# Think Like a Programmer 
+plan # Think Like a Programmer 
 
 1. Always have a plan 
 2. restate the problem
