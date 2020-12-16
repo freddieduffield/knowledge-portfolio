@@ -2,7 +2,7 @@
 
 # Expressions and Operators 
 
-## Logical Operators
+## Logical Operators
 
 `??` - [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator): returns right hand side of operand if the left is `null` or `undefined`
 
@@ -135,7 +135,7 @@ console.log(groupPeople);
 ```
 
 ---
-### Array.prototype.some()
+### Array.prototype.some()
 
 [.some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
@@ -145,7 +145,7 @@ tests if at least 1 item appears in an array
 
 ---
 
-### Array.prototype.sort()
+### Array.prototype.sort()
 
 [.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
@@ -197,7 +197,7 @@ array.slice(0, 1);
 
 ---
 
-## Array.prototype.indexOf()
+## Array.prototype.indexOf()
 
 [.indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
