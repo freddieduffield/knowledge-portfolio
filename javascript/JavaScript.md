@@ -29,6 +29,9 @@ The `slice()` method extracts a section of a string and returns it as a new stri
 
 ---
 
+# Map
+
+# Set
 # Arrays
 
 .shift - remove items from the front of the array.
@@ -135,7 +138,7 @@ console.log(groupPeople);
 ```
 
 ---
-### Array.prototype.some()
+### Array.prototype.some()
 
 [.some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
@@ -145,7 +148,7 @@ tests if at least 1 item appears in an array
 
 ---
 
-### Array.prototype.sort()
+### Array.prototype.sort()
 
 [.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
@@ -197,7 +200,7 @@ array.slice(0, 1);
 
 ---
 
-## Array.prototype.indexOf()
+### Array.prototype.indexOf()
 
 [.indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
@@ -454,6 +457,38 @@ console.log(b) // -> 1000
 
 # Functions
 `Function.length` is the number of parameters 
+### Function.prototype.call()
+
+[.call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+
+**parameters:** `this`, `...args`
+
+allows for a function belonging to one object to called and assigned for a different object.
+
+* calling chain constructors
+* invoke anonymous function
+* invoke function a specific the context of this
+  
+```js
+function Product(name, price) {
+  this.name = name; 
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = 'food';
+}
+
+function Toy(name, price) {
+  Product(this, name, price);
+  this.category = 'toy';
+}
+
+const cheese = new Food('feta', 13);
+const doll = new Toy('barbie', 234);
+```
+
 ### the arguments object 
 
 [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)

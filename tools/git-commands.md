@@ -23,6 +23,9 @@ git add -p
 `git branch -m oldName newName` - rename branch
 
 ---
+## Clean
+`git clean -xf` - removed untracked and ignored files from your git repo.
+---
 ## Commit
 
 change last commit message 
@@ -112,6 +115,16 @@ Pulls latest stash on working branch
 git stash clear
 ```
 Removes latest stash. Can use to get rid of all unstage changes if used after a stash 
+
+```
+git stash list
+```
+list previous stashes 
+
+```
+git stash apply stash@{1} 
+```
+Apply the changes from a specific stash
 
 ---
 ## Push directory to git hub
