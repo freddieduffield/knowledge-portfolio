@@ -16,6 +16,13 @@ When looping through strings use `of`
 
 ---
 
+
+# Statements and Declarations
+
+## throw
+
+a user defined exception. will be passed to first catch block, if no catch block exists program will terminate
+
 # Strings 
 
 ### Slice 

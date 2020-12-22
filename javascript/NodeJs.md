@@ -288,3 +288,9 @@ _.get(object, 'a[0].b.c')
 ## [Backstop.js](https://github.com/garris/BackstopJS)
 
 *Visual regression testing*
+
+---
+
+## [Buyan](https://github.com/trentm/node-bunyan)
+JSON logging
+[bunyan simple json logging library](https://hackernoon.com/bunyan-simple-json-logging-library-1bb1d856c8e5)

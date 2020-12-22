@@ -2,7 +2,48 @@
 
 ## Jest 
 
-## Sinion / Mocha / Chai
+### Assertions 
+
+`toEqual()`
+
+`toHaveBeenCalledTimes(2)`
+
+`toHaveBeenCalledWith('argument1', 'argument2')`
+
+`toHaveBeenNthCalledWith(1, 'argument1, 'argument2')`
+
+### Mock functions 
+
+`jest.fn()`
+
+Essentially spies. Pass it the function that you wish to mock, it will record what arguments it called with, how many times it a called etc.
+
+`mockFn.mock.calls` - array containing all the arguments 
+
+```js
+jest.spyOn(obj, 'method')
+obj.function.mockImplementation((arg1, arg2) => arg2);
+...
+obj.function.mockRestore()
+```
+
+`jest.mock()`
+
+to mock a whole module
+
+```js
+jest.mock('../path', () => { 
+  return {
+    method: jest.fn((arg1, arg2) => arg)
+  }
+})
+```
+1. pathway to module
+2. module factory function, returns the mocked version of the module
+
+`__mock__` directory to keep mocks you want to use between files
+
+## Sinion / Mocha / Chai
 
 ### stubs
 
