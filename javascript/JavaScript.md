@@ -2,7 +2,7 @@
 
 # Expressions and Operators 
 
-## Logical Operators
+## Logical Operators
 
 `??` - [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator): returns right hand side of operand if the left is `null` or `undefined`
 
