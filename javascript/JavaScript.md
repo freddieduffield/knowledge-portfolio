@@ -25,6 +25,11 @@ a user defined exception. will be passed to first catch block, if no catch block
 
 # Strings 
 
+### Replace
+
+**parameters:** 1. regex | substr, 2. newSubstr | function
+
+**Returns:** a new string
 ### Slice 
 
 The `slice()` method extracts a section of a string and returns it as a new string, without modifying the original string.
@@ -91,7 +96,7 @@ find invokes the callback on each element of the array until it returns a truthy
 
 ---
 
-### Array.prototype.reduce()
+### Array.prototype.**reduce**()
 
 [.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 

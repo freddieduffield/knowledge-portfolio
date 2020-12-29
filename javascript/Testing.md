@@ -41,7 +41,7 @@ jest.mock('../path', () => {
 1. pathway to module
 2. module factory function, returns the mocked version of the module
 
-`__mock__` directory to keep mocks you want to use between files
+`__mock__` directory to keep mocks you want to use between files$$
 
 ## Sinion / Mocha / Chai
 
