@@ -575,7 +575,7 @@ try {
 |`EvalError`| creates an instance respresenting an error that occurs regarding the global function `eval()` |
 |`InternalError`| Creates an instnace representing an error that occurs when an internal error in the Javascript engine occurs|
 |`RangeError`|Creates an instance representing an error that occurs when de-referencing an invalid |
-|`ReferenceError`||
+|`ReferenceError`| non-existent variable is referenced | 
 |`SyntaxError`||
 |`TypeError`||
 |`URIError`||
@@ -867,6 +867,21 @@ return fetch("https://api.newrelic.com/v2/applications.json?filter[name]=sdtech-
 const { applications } = getApplications();
 
 console.log('variable: ', applications);
+```
+
+## Async / Await 
+### returning await
+
+[await-vs-return-vs-return-await](https://jakearchibald.com/2017/await-vs-return-vs-return-await/)
+
+when rapping an await in a try catch in order for the catch block to be executed on a rejection, you must return the await.
+
+```js
+try {
+  return await asyncFunction(); 
+} catch (error) {
+  return 'caught'
+}
 ```
  
 # Modules 

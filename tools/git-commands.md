@@ -23,8 +23,23 @@ git add -p
 `git branch -m oldName newName` - rename branch
 
 ---
+## Checkout
+
+create new branch
+```
+git checkout -b <branch-name>
+```
+
+discard changes in working directory
+```
+git checkout -- <filename>
+```
+
+---
 ## Clean
+`git clean -fd` - removed untracked directories 
 `git clean -xf` - removed untracked and ignored files from your git repo.
+
 ---
 ## Commit
 
@@ -68,6 +83,9 @@ Get a graph of commit history, helpful with merges etc.
 git log --graph --decorate --all
 ```
 
+```
+git reflog
+```
 ---
 
 ## Merge
@@ -88,7 +106,7 @@ git rebase master
 ## Reset
 when someone has made an ammendment to a commit and you pull the branch and get a merge conflict 
 
-```bash 
+```
 git reset --hard origin/branchName
 ```
 
@@ -132,8 +150,9 @@ Apply the changes from a specific stash
 Pushing to a new git hub repo (create repo on git hub first)
 
 ```
-git remote add origin git@github.com:FrederickFoxxx/knowledge-portfolio.git
-git push -u origin master
+git remote add origin git@github.com:freddieduffield/problems.git
+git branch -M main
+git push -u origin main
 ```
 ---
 ## Misc

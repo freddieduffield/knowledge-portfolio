@@ -218,6 +218,11 @@ Each incoming request passes through the request LifeCycle
 - **finalize request**
   - emits reponse event
 
+
+## response toolkit
+response toolkit: [docs](https://hapi.dev/api/?v=17.9.3#response-toolkit)
+
+a collection of properties and utilities passed to every lifecycle method. passed as function argument to handler. Traditional notation is `h`, which simply stands for hapi 
 # Packages 
 
 _notes on the packages of the javascript ecosystem_
