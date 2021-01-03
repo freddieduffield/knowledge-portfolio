@@ -2,9 +2,11 @@
 
 # Expressions and Operators 
 
+`%=` [remainder assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment): divides the variable via the right hand operand and assigns the result to the variable
+
 ## Logical Operators
 
-`??` - [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator): returns right hand side of operand if the left is `null` or `undefined`
+`??` [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator): returns right hand side of operand if the left is `null` or `undefined`
 
 ### in  
 
