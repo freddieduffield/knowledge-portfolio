@@ -111,14 +111,13 @@ then create and paste config `touch .prettierrc`
 ```json 
 {
   "arrowParens": "always",
-  "bracketSpacing": true,
-  "embeddedLanguageFormatting": "auto",
+  "bracketSpacing": false,
   "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
   "jsxBracketSameLine": false,
-  "jsxSingleQuote": true,
+  "jsxSingleQuote": false,
   "printWidth": 80,
-  "proseWrap": "preserve",
+  "proseWrap": "always",
   "quoteProps": "as-needed",
   "requirePragma": false,
   "semi": true,
@@ -126,8 +125,8 @@ then create and paste config `touch .prettierrc`
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
-  "vueIndentScriptAndStyle": false
 }
+
 ```
 To get auto format on save install the prettier vs code extension, and add to `settings.json`
 ```json
@@ -147,6 +146,126 @@ Then add it to the `.eslintrc` to the extends property. disables any rule that p
   "extends": ["eslint:recommended", "eslint-config-prettier"],
 }
 ```
+
+**Validate script**
+in the scripts section of `package.json`
+
+```json
+{
+  "validate": "npm run lint && npm run build"
+}
+```
+
+Also can create a check to see if files are formatted correctly
+
+```json
+{
+  "check-format": "prettier --ignore-path .gitignore --list-different \"**/*.(js|json)\""
+}
+```
+
+Then can update validate to also check the formatting of files and prettier script
+
+```json
+{
+  {
+  ...
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "lint": "eslint --ignore-path .gitignore .",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "validate": "npm run lint && npm run build"
+  }
+}
+}
+```
+---
+## typescript
+
+1. install typescript as a dev dependency
+2. create `tsconfig.json`
+3. add `compilerOptions`
+   1. `baseUrl` to `./src`
+   2. set `noEmit` to `true`
+4. add script `check-types`, it will run `tsc`
+5. add `check-types` to `validate` script
+6. update prettier script to include `ts` & `tsx`
+7. update build script to include `ts` files, add `--extensions .js, .ts, tsx` after `src`
+8. install as a dev dependency `@babel/preset-typescript`
+9. add `@babel/preset-typescript` to babel config
+
+**Configure eslint to work with typescript**
+
+1. install as dev depenency `@typescript-eslint/eslint-plugin` & `@typescript-eslint/parser`
+2. extend `lint` script to consider typescript files add `--ext .js, .ts, tsx`
+3. add `overides` to eslint config
+
+```json
+{
+  "overrides": [
+    {
+      "files": "**/*.+(ts|tsx)",
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "plugins": ["@typescript-eslint/eslint-plugin"],
+      "extends:": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "eslint-config-prettier/@typescript-eslint"
+      ]
+    }
+  ]
+}
+```
+
+## Husky
+
+1. install husky as dev dependency
+2. create `.huskyrc`
+3. add the folllowing
+   ```json
+   {
+     "hooks": {
+       "pre-commit": "npm run validate"
+     }
+   }
+   ```
+4. take a look all the types of hooks you could set up `ls -a .git/hooks/`
+
+## lint staged
+
+1. install `lint-staged` as a dev dep.
+2. create `.lintstagedrc`
+3. add ... to the above
+
+```json
+{
+  "*.+(js|ts|tsx)": ["eslint"],
+  "**/*.+(js|json|ts|tsx)": ["prettier --write", "git add"]
+}
+```
+
+4. add as pre-commit hook in `.huskyrc`
+
+```json
+{
+  "hooks": {
+    "pre-commit": "npm run check-types && lint-staged && npm run build"
+  }
+}
+```
+
+## Npm run all 
+1. install `npm-run-all` as dev dep
+2. update validate script to use `npm-run-all`
+```
+npm-run-all --parallel check-types check-format lint build
+```
+
 
 ---
 ## Jest 
