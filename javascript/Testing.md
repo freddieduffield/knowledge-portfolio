@@ -68,17 +68,17 @@ add to eslint to script config, in `package.json`
     "lint": "eslint ."
   },
 }
-
 ```
+
 run it with `npm run lint`
 
-```
 create a `touch .eslintignore`, and paste in
 ```
 node_modules
 dist
 ```
 or add to the script
+
 ```json 
 {
   "lint": "eslint --ignore-path .gitignore ."
@@ -169,7 +169,6 @@ Then can update validate to also check the formatting of files and prettier scri
 ```json
 {
   {
-  ...
   "scripts": {
     "build": "babel src --out-dir dist",
     "lint": "eslint --ignore-path .gitignore .",
@@ -182,7 +181,7 @@ Then can update validate to also check the formatting of files and prettier scri
 }
 ```
 ---
-## typescript
+### typescript
 
 1. install typescript as a dev dependency
 2. create `tsconfig.json`
@@ -222,7 +221,7 @@ Then can update validate to also check the formatting of files and prettier scri
 }
 ```
 
-## Husky
+### Husky
 
 1. install husky as dev dependency
 2. create `.huskyrc`
@@ -236,7 +235,7 @@ Then can update validate to also check the formatting of files and prettier scri
    ```
 4. take a look all the types of hooks you could set up `ls -a .git/hooks/`
 
-## lint staged
+### lint staged
 
 1. install `lint-staged` as a dev dep.
 2. create `.lintstagedrc`
@@ -259,7 +258,7 @@ Then can update validate to also check the formatting of files and prettier scri
 }
 ```
 
-## Npm run all 
+### npm-run-all 
 1. install `npm-run-all` as dev dep
 2. update validate script to use `npm-run-all`
 ```
@@ -279,6 +278,13 @@ npm-run-all --parallel check-types check-format lint build
 `toHaveBeenCalledWith('argument1', 'argument2')`
 
 `toHaveBeenNthCalledWith(1, 'argument1, 'argument2')`
+
+### Selectors
+
+[api queries](https://testing-library.com/docs/dom-testing-library/api-queries/)
+[guide to which query](https://testing-library.com/docs/guide-which-query/)
+
+`getByRole` - best selector because it is based of accessibility. 
 
 ### Mock functions 
 
