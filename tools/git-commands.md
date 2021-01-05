@@ -155,6 +155,13 @@ git branch -M main
 git push -u origin main
 ```
 ---
+## Remove git from a repo
+
+```
+rm -rf .git
+```
+
+---
 ## Misc
 
 Link to a specific commit or branch from package json 
