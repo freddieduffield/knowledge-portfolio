@@ -1,4 +1,6 @@
 # jargon glossary 
+`CDN` - content delivery network, not web host but utilises cache content at the networks edge to improve performance
+
 `DNS` - Domain Name System - internet phonebook
 
 `DNS cache` - Temporary storage about previous dns lookups keep on machines os or browser
