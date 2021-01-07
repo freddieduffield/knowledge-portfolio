@@ -1,4 +1,7 @@
 # Unix
+
+## Changing Access Permissions
+`chmod u+x` - make executable 
 ## cat
 * show contents of file 
   ```Bash
