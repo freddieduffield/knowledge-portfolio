@@ -1,5 +1,32 @@
 # HTTP
 
+Request 
+```
+GET / HTTP/1.1      <- request line
+Host: example.com   <- Headers
+User-Agent: curl
+Accept: */*
+```
+
+Response
+
+```
+HTTP/ 1.1 200 OK            <- status
+Cache-Control: max-age=6030 <- headers
+Content-Type: text/html
+<!doctype html>             <- body
+
+```
+
+URLs
+
+**scheme** - the protcol
+`https://`
+
+**domain** - Where to send request, the `Host` gets set to this. 
+`example.com` 
+
+**port** 
 ## Request Lifecycle
 
 **1. Local Processing**
