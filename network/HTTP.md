@@ -26,7 +26,19 @@ URLs
 **domain** - Where to send request, the `Host` gets set to this. 
 `example.com` 
 
-**port** 
+**port** - defaults to 80 for http and 443 for https
+`:443`
+
+**path** - the path to ask the server for
+`/cats`
+
+**query params** 
+`color=black`
+
+**url encoding** URLs aren't allowed certain special characters.
+`%20`
+
+**fragment id** isn't sent to server used by js on page or to jump to tag
 ## Request Lifecycle
 
 **1. Local Processing**
