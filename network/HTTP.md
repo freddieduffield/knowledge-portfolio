@@ -1,6 +1,12 @@
 # HTTP
 
-Request 
+HTTP requests always have: 
+* domain `examplecat.com`
+* resource `/cat.png`
+* method `GET`, `POST` etc.
+* headers
+
+**Request**
 ```
 GET / HTTP/1.1      <- request line
 Host: example.com   <- Headers
@@ -8,7 +14,7 @@ User-Agent: curl
 Accept: */*
 ```
 
-Response
+**Response**
 
 ```
 HTTP/ 1.1 200 OK            <- status
@@ -18,7 +24,39 @@ Content-Type: text/html
 
 ```
 
-URLs
+### Methods 
+
+`GET`
+
+* Request when entering url in browser
+* usually don't have body 
+* won't change anything on the server.
+
+`POST`
+
+* usually have body.
+  * `Content-Type` describes the type of the body
+
+`HEAD`
+
+* returns the same as `GET` but with out the response body.
+
+`OPTIONS`
+
+* used for cors requests
+
+`DELETE`
+
+`PUT`
+
+`PATCH`
+
+`TRACE`
+
+`CONNECT`
+
+
+### URLs
 
 **scheme** - the protcol
 `https://`
@@ -39,6 +77,29 @@ URLs
 `%20`
 
 **fragment id** isn't sent to server used by js on page or to jump to tag
+`#cat`
+
+
+## Headers
+
+Every request and response have headers to send extra data.
+* Key value pairs
+* aren't case sensitive
+
+**Different kinds of headers**
+
+* Describe the body
+```
+content-type: image/png
+content-length: 1234
+content-encoding: gzip
+content-language: es-ES
+```
+* Ask for specific kind of response
+* Manage Caches
+* say where request comes from
+* cookies
+
 ## Request Lifecycle
 
 **1. Local Processing**

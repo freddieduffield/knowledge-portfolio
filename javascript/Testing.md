@@ -269,6 +269,9 @@ npm-run-all --parallel check-types check-format lint build
 ---
 ## Jest 
 
+**Run tests from specific file** 
+when tests running in watch mode press `p` and enter the regex for the file you want to run. 
+
 ### Assertions 
 
 `toEqual()`
