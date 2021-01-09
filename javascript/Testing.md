@@ -270,7 +270,7 @@ npm-run-all --parallel check-types check-format lint build
 ## Jest 
 
 **Run tests from specific file** 
-when tests running in watch mode press `p` and enter the regex for the file you want to run. 
+when tests running in watch mode press `p` and enter the regex for the file you want to run. k
 
 ### Assertions 
 
@@ -320,6 +320,58 @@ jest.mock('../path', () => {
 
 `__mock__` directory to keep mocks you want to use between files$$
 
+### jest-in-case
+
+```js
+// auth.js
+export function isPasswordAllowed(password) {
+  return (
+    password.length > 6 &&
+    // non-alphanumeric
+    /\W/.test(password) &&
+    // digit
+    /\d/.test(password) &&
+    // capital letter
+    /[A-Z]/.test(password) &&
+    // lowercase letter
+    /[a-z]/.test(password)
+  )
+}
+
+// auth.test.js
+import cases from 'jest-in-case'
+import {isPasswordAllowed} from '../auth'
+
+function casify(obj) {
+  return Object.entries(obj).map(([name, password]) => ({
+    name: `${password} - ${name}`,
+    password
+  })) 
+}
+
+cases(
+  'isPasswordAllowed: valid passwords',
+  ({password}) => {
+    expect(isPasswordAllowed(password)).toBe(true)
+  },
+  casify({'valid': '!aBc123k'})
+)
+
+cases(
+  'isPasswordAllowed: invalid passwords',
+  ({password}) => {
+    expect(isPasswordAllowed(password)).toBe(false)
+  },
+  casify({
+    'too short': 'a2c!',
+    'no alphabet characters' : '123456!',
+    'no numbers' : 'ABCdef!',
+    'no uppercase letters' : 'abc123!',
+    'no lowercase letters' : 'ABC123!', 
+    'no non-alphanumeric characters': 'ABCdef123',
+  })
+)
+```
 ## Sinion / Mocha / Chai
 
 ### stubs
