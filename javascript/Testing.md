@@ -1,5 +1,12 @@
 # Testing
 
+## Priciples
+### Test object factories
+
+At some point, test may have a lot of setup shared between tests. The idea of creating a test object factory is create utility to share between tests and to make it easy to see what is the difference between tests.
+
+* [ObjectMother](https://martinfowler.com/bliki/ObjectMother.html)
+* [aha testing](https://kentcdodds.com/blog/aha-testing)
 ## Static Analysis Testing
 ### Eslint
 
@@ -275,6 +282,8 @@ when tests running in watch mode press `p` and enter the regex for the file you 
 ### Assertions 
 
 `toEqual()`
+
+`toHaveBeenCalled()`
 
 `toHaveBeenCalledTimes(2)`
 
