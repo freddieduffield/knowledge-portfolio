@@ -1,29 +1,38 @@
 # Testing
 
 ## Priciples
+
 ### Test object factories
 
 At some point, test may have a lot of setup shared between tests. The idea of creating a test object factory is create utility to share between tests and to make it easy to see what is the difference between tests.
 
-* [ObjectMother](https://martinfowler.com/bliki/ObjectMother.html)
-* [aha testing](https://kentcdodds.com/blog/aha-testing)
+- [ObjectMother](https://martinfowler.com/bliki/ObjectMother.html)
+- [aha testing](https://kentcdodds.com/blog/aha-testing)
+
 ## Static Analysis Testing
+
 ### Eslint
 
 save as dev dependency
+
 ```
 npm install --save-dev eslint
 ```
 
 run across all projects files
+
 ```
 npx eslint .
 ```
+
 create `.eslintrc` file
+
 ```
 touch .eslintrc
 ```
+
 Add config to `.eslintrc`
+
 ```js
 {
   "parserOptions": {
@@ -35,11 +44,13 @@ Add config to `.eslintrc`
   }
 }
 ```
+
 add rules
+
 ```js
 {
   "rules": {
-    "strict": ["error", "never"],  
+    "strict": ["error", "never"],
     "valid-typeof": "error",
     "no-unsafe-negation": "error",
     "no-unused-vars":"error",
@@ -48,7 +59,9 @@ add rules
   }
 }
 ```
+
 add env
+
 ```json
 {
   "env": {
@@ -56,66 +69,80 @@ add env
   }
 }
 ```
+
 auto Fix across all files
+
 ```
 npx eslint . --fix
 ```
+
 Use recommended set of rules. In the array the one that comes last overrides the previous.
+
 ```json
   "extends": ["eslint:recommended"],
   "rules": {
     "strict": ["error", "never"],
   },
 ```
+
 add to eslint to script config, in `package.json`
+
 ```json
 {
   "scripts": {
     "build": "babel src --out-dir dist",
     "lint": "eslint ."
-  },
+  }
 }
 ```
 
 run it with `npm run lint`
 
 create a `touch .eslintignore`, and paste in
+
 ```
 node_modules
 dist
 ```
+
 or add to the script
 
-```json 
+```json
 {
   "lint": "eslint --ignore-path .gitignore ."
 }
 ```
 
 ---
+
 ### Prettier
 
 ```
 npm install --save-dev prettier
 ```
+
 run prettier on specific file
+
 ```
 npx prettier src/example.js
 ```
-Setup script that has glob to target specific files. 
+
+Setup script that has glob to target specific files.
+
 ```json
 {
-   "scripts": {
+  "scripts": {
     "build": "babel src --out-dir dist",
     "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.(js|json)\""
-  },
+  }
 }
 ```
+
 To figure out what config you want go to [prettier.io/playground](https://prettier.io/playground/)
 then create and paste config `touch .prettierrc`
 
-```json 
+```json
 {
   "arrowParens": "always",
   "bracketSpacing": false,
@@ -131,26 +158,30 @@ then create and paste config `touch .prettierrc`
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": false,
+  "useTabs": false
 }
-
 ```
+
 To get auto format on save install the prettier vs code extension, and add to `settings.json`
+
 ```json
 {
   "editor.defaultFormatter": "esbenp.pretter-vscode",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": true
 }
 ```
+
 **eslint-config-prettier**
 
 ```
 npm install --save-dev eslint-config-prettier
 ```
+
 Then add it to the `.eslintrc` to the extends property. disables any rule that prettier renders useless.
+
 ```json
 {
-  "extends": ["eslint:recommended", "eslint-config-prettier"],
+  "extends": ["eslint:recommended", "eslint-config-prettier"]
 }
 ```
 
@@ -187,7 +218,9 @@ Then can update validate to also check the formatting of files and prettier scri
 }
 }
 ```
+
 ---
+
 ### typescript
 
 1. install typescript as a dev dependency
@@ -265,21 +298,23 @@ Then can update validate to also check the formatting of files and prettier scri
 }
 ```
 
-### npm-run-all 
+### npm-run-all
+
 1. install `npm-run-all` as dev dep
 2. update validate script to use `npm-run-all`
+
 ```
 npm-run-all --parallel check-types check-format lint build
 ```
 
-
 ---
-## Jest 
 
-**Run tests from specific file** 
+## Jest
+
+**Run tests from specific file**
 when tests running in watch mode press `p` and enter the regex for the file you want to run. k
 
-### Assertions 
+### Assertions
 
 `toEqual()`
 
@@ -296,15 +331,15 @@ when tests running in watch mode press `p` and enter the regex for the file you 
 [api queries](https://testing-library.com/docs/dom-testing-library/api-queries/)
 [guide to which query](https://testing-library.com/docs/guide-which-query/)
 
-`getByRole` - best selector because it is based of accessibility. 
+`getByRole` - best selector because it is based of accessibility.
 
-### Mock functions 
+### Mock functions
 
 `jest.fn()`
 
 Essentially spies. Pass it the function that you wish to mock, it will record what arguments it called with, how many times it a called etc.
 
-`mockFn.mock.calls` - array containing all the arguments 
+`mockFn.mock.calls` - array containing all the arguments
 
 ```js
 jest.spyOn(obj, 'method')
@@ -318,12 +353,13 @@ obj.function.mockRestore()
 to mock a whole module
 
 ```js
-jest.mock('../path', () => { 
+jest.mock('../path', () => {
   return {
-    method: jest.fn((arg1, arg2) => arg)
-  }
-})
+    method: jest.fn((arg1, arg2) => arg),
+  };
+});
 ```
+
 1. pathway to module
 2. module factory function, returns the mocked version of the module
 
@@ -344,43 +380,44 @@ export function isPasswordAllowed(password) {
     /[A-Z]/.test(password) &&
     // lowercase letter
     /[a-z]/.test(password)
-  )
+  );
 }
 
 // auth.test.js
-import cases from 'jest-in-case'
-import {isPasswordAllowed} from '../auth'
+import cases from 'jest-in-case';
+import { isPasswordAllowed } from '../auth';
 
 function casify(obj) {
   return Object.entries(obj).map(([name, password]) => ({
     name: `${password} - ${name}`,
-    password
-  })) 
+    password,
+  }));
 }
 
 cases(
   'isPasswordAllowed: valid passwords',
-  ({password}) => {
-    expect(isPasswordAllowed(password)).toBe(true)
+  ({ password }) => {
+    expect(isPasswordAllowed(password)).toBe(true);
   },
-  casify({'valid': '!aBc123k'})
-)
+  casify({ valid: '!aBc123k' })
+);
 
 cases(
   'isPasswordAllowed: invalid passwords',
-  ({password}) => {
-    expect(isPasswordAllowed(password)).toBe(false)
+  ({ password }) => {
+    expect(isPasswordAllowed(password)).toBe(false);
   },
   casify({
     'too short': 'a2c!',
-    'no alphabet characters' : '123456!',
-    'no numbers' : 'ABCdef!',
-    'no uppercase letters' : 'abc123!',
-    'no lowercase letters' : 'ABC123!', 
+    'no alphabet characters': '123456!',
+    'no numbers': 'ABCdef!',
+    'no uppercase letters': 'abc123!',
+    'no lowercase letters': 'ABC123!',
     'no non-alphanumeric characters': 'ABCdef123',
   })
-)
+);
 ```
+
 ## Sinion / Mocha / Chai
 
 ### stubs
@@ -388,16 +425,17 @@ cases(
 [https://sinonjs.org/releases/latest/stubs/](https://sinonjs.org/releases/latest/stubs/)
 
 Stubs can be annonymous or wrap existing functions, when they wrap a function the original is not called.
-They are simple to get through the code. It doesn't do ant 
+They are simple to get through the code. It doesn't do ant
 |||
 |---|---|
 |`.alwaysCalledWithExactly()` ||
 |`.returns()`| |
-|`.throws()`| 
-| `.onCall()` | (stub responds differently on consecutive calls)
-|`.onFirstCall()` | chain with throws, if you want test first call failing 
+|`.throws()`|
+| `.onCall()` | (stub responds differently on consecutive calls) specific number of calls argument
+|`.onFirstCall()` | chain with throws, if you want test first call failing
 |`.onSecondCall()` | see above
 |`.onThirdCall()` | see above
+|`.throwsException()` | pass it an `new Error()`
 
 `var stub = sinon.stub(object, "method");`
 
@@ -405,6 +443,29 @@ Replaces object.method with a stub function. An exception is thrown if the prope
 
 ### Spy
 
-Are a special type of stub that collect the data on how the function is stubs is called. you can then check how many times it was called etc. 
+Are a special type of stub that collect the data on how the function is stubs is called. you can then check how many times it was called etc.
+
+### chai-as-promised
+
+`to.be.rejectedWith`
+
+```js
+it('retries 0 times reading from S3 before failing and propagates the error when retries set to 0', async () => {
+  getObjectStub.onFirstCall().throwsException(new Error('Error'));
+
+  expect(retrieveS3File('aBucket', 'filename', 0))
+    .to.be.rejectedWith(
+      Error,
+      'Could not load filename from S3 bucket aBucket: Error'
+    )
+    .then(() => {
+      expect(getObjectStub.callCount).to.equal(1);
+    });
+});
+```
 
 ## React Testing Library
+
+```
+
+```
