@@ -464,6 +464,14 @@ it('retries 0 times reading from S3 before failing and propagates the error when
 });
 ```
 
+### Nock 
+
+Mocking Module that incepts requests
+
+```
+DEBUG=nock.*
+```
+
 ## React Testing Library
 
 ```
