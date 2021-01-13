@@ -34,6 +34,8 @@
 
 `opt + f7` : find usages
 
+`shift + f6` : refactor > rename
+
 ---
 
 ## Debugging 
