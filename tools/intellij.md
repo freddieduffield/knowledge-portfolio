@@ -36,6 +36,8 @@
 
 `shift + f6` : refactor > rename
 
+`cmd + opt + \`` : next project window
+
 ---
 
 ## Debugging 

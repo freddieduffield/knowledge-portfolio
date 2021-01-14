@@ -1,7 +1,13 @@
 # Unix
 
 ## Changing Access Permissions
-`chmod u+x` - make executable 
+`chmod u+x` - make executable
+
+## write command to file 
+```
+npm audit > out.txt
+``` 
+ 
 ## cat
 * show contents of file 
   ```Bash
