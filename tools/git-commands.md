@@ -37,6 +37,7 @@ git checkout -- <filename>
 
 ---
 ## Clean
+`git clean -d -i` - interactively clean untracked files and directories. can go through one by one if wished.
 `git clean -fd` - removed untracked directories 
 `git clean -xf` - removed untracked and ignored files from your git repo.
 
