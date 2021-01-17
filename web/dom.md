@@ -27,3 +27,13 @@ or with the index
 ```
 event.target[0].value
 ```
+
+## History
+
+`.pushState(state: object, title: string, url: string) ` - add entry to browsers history stack. params
+
+## Window
+
+### Popstate 
+event fired when active history entry changes i.e. when browser back or forward buttons hit.
+
