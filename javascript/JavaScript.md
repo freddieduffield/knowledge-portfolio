@@ -44,13 +44,30 @@ The `slice()` method extracts a section of a string and returns it as a new stri
 ---
 
 # Map
+[docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+* Map is datastructure that holds key value pairs and remembers the order insertion. 
+* Map is directly iterable. it iterates its elements in order of insertion with a `for... of` loop.
+* doesn't contain any keys by default, Only contains what you put into it.
+* keys can be functions objects or any primative type
+* Number entries retrieve with `size` property.
+* performs better for insertion and deletions
+
+`.set(key, value)` - to add elements to a map
+
+`.clear()`
+
+`.delete(key)`
+
+`.get(key)`
+
+`.has(key)`
 
 # Set
 # Arrays
 
-.shift - remove items from the front of the array.
+`.shift` - remove items from the front of the array.
 
-.includes
+`.includes`
 
 ---
 
@@ -400,7 +417,7 @@ const { name: firstname,
     country: land,
     city: town
   }
-}
+} = person;
 
 console.log(firstname) // -> fred
 console.log(land) // -> England
