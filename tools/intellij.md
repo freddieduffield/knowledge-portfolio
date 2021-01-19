@@ -2,7 +2,7 @@
 
 `sout` : System.out.println
 
-`double shift`  : search everywhere 
+`double shift` : search everywhere 
 
 `ctrl + G` : search next occurance 
 
@@ -37,6 +37,23 @@
 `shift + f6` : refactor > rename
 
 `cmd + opt + \`` : next project window
+
+## 1: Project  
+
+`f6` - move
+
+`shift + f6` - refactor > rename
+
+4: run
+
+`ctrl + cmd + r` - run
+
+## 5: debug
+
+`ctrl + D` - debug
+
+`cmd + r` - rerun
+
 
 ---
 
