@@ -420,6 +420,8 @@ cases(
 
 ## Sinion / Mocha / Chai
 
+`.calledWithExactly()`
+
 ### stubs
 
 [https://sinonjs.org/releases/latest/stubs/](https://sinonjs.org/releases/latest/stubs/)
