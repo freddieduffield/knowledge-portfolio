@@ -420,7 +420,9 @@ cases(
 
 ## Sinion / Mocha / Chai
 
-`.calledWithExactly()`
+`to.be.calledWithExactly()`
+    
+`to.be.lengthOf()`
 
 ### stubs
 
