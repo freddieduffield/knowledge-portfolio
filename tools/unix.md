@@ -30,6 +30,8 @@ mv filename.txt newfilename.txt
 ```Bash
 mv ./Downloads/lecture-79-challenge.txt ./curriculum/1907-0208-2020
 ```
+## tail -f /path/to.log
+show logs as they come out.
 
 ## touch 
 * create a file
