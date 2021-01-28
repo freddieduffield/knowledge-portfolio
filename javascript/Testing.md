@@ -476,6 +476,10 @@ Mocking Module that incepts requests
 DEBUG=nock.*
 ```
 
+## Enzyme
+
+.filterWhere()
+
 ## React Testing Library
 
 ```

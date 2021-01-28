@@ -80,3 +80,7 @@
 `cmd + D` show diff
 `alt + cmd + z` rollback
 
+--- 
+## Hierachy 
+
+`ctrl + alt + h` - callers of heirachy 
