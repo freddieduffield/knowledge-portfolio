@@ -5,6 +5,7 @@
 ```
 arn:partition:service:region:account-id:resource-id
 ```
+`AZ` - Availability Zone: each region is divided into availability zones consisting of datacenters/   
 
 ---
 
