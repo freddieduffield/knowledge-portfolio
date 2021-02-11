@@ -63,6 +63,7 @@ The `slice()` method extracts a section of a string and returns it as a new stri
 `.has(key)`
 
 # Set
+
 # Arrays
 
 `.shift` - remove items from the front of the array.
@@ -568,7 +569,6 @@ or
 const args = [...arguments]
 ```
 
-
 # Standard Built in Objects 
 
 ### Error
@@ -638,9 +638,6 @@ console.log(p.a, p.b) // 1 , undefined
 console.log(p in c, p.c) // false , 37
 ```
 
-
-
-
 # Asynchronous JavaScript 
 ## Blocking vs non-blocking
   - Blocking - sync
@@ -698,7 +695,7 @@ console.log(p in c, p.c) // false , 37
   ```
   - node make it easy to performant code. 
 
-  ## Async Patterns
+## Async Patterns
   - callbacks
   - Promises
   - Async / Await 
@@ -710,7 +707,7 @@ console.log(p in c, p.c) // false , 37
   - process.nextTick()
   - readFile()
 
-  ## Callbacks
+## Callbacks
   - just because a call back is used doen't make it asynchronous
 
   ```js

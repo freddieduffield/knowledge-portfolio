@@ -70,6 +70,27 @@ add env
 }
 ```
 
+```
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+  },
+  "rules": {
+    "strict": ["error", "never"],
+    "valid-typeof": "error",
+    "no-unsafe-negation": "error",
+    "no-unused-vars":"error",
+    "no-unexpected-multiline": "error",
+    "no-undef": "error"
+  },
+  "env": {
+    "browser": true
+  }
+}
+
+```
+
 auto Fix across all files
 
 ```

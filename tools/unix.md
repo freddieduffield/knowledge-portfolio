@@ -73,6 +73,14 @@ displays paginated file output, can be navigated. Useful for large files
 ```
 less <filename>
 ```
+
+## [ngrep](https://netbeez.net/blog/linux-analyze-network-ngrep/#:~:text=Ngrep%2C%20stands%20for%20%E2%80%9Cnetwork%20grep,in%20a%20human%2Dfriendly%20way)
+
+network grep 
+
+## tcpdump
+data network packet analyser
+
 # bash
 
 switch permenantly to bash `chsh -s /bin/bash`
@@ -90,3 +98,6 @@ echo $(pwd)/myFile.txt
 
 ## tr 
 used to transform string or 
+
+
+

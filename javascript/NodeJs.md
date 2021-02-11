@@ -1,6 +1,6 @@
 # Node.js
 
-## Buffers
+## Buffer
 - transfer data 
 - temporary storage chunk of data 
 - when buffer full it can passed on.
@@ -8,13 +8,54 @@
 - increase performance 
 - read and write files. 
 
-## Streams
-- stream of data that flow over time from one point to another
-- 
+## DNS
+node internal module for domain name resolution
+
+[lookup](https://nodejs.org/api/dns.html#dns_dns_lookup_hostname_options_callback) doesn't neccessarily perform network operations, but performs on the operating system.
+
+- params:
+    - `hostname` : <string>
+    - `options`: <object> | <integer> , if it is an integer it must be either `4` or `6` all are optional, if not provided both IPv4  & 6, can include -
+        - `family` : <integer> - the type of ip either `4` or `6`
+        - `hints` : <number> One or more supported `getaddrinfo` flags, multiple can bitwise or thier values
+        - `all`: <boolean> when true retuns all the resolved addresses in an array otherwise return single address, default false
+        - `verbatim`: <boolean> if true callback recieve ip addresses in the order the DNS resolver returned them. when false IPv4 place before IPv6. defaults to false
+    - `callback`
+        - `err` <error>
+        - `address` <string> representing the IPv4 or IPv6 address
+        - `family` <integer> `4` and `6`
+
+`lookup` resolves the first found IPv4 & IPv6 record. On `err`, `err.code` will be sent to `'ENOENT'` not only when hostname doesn't exist but also when the lookup fails, such as not available file descriptors. `lookup` doesn't neccessarily have anything to do DNS protocol. The implementation uses operating facility that can associate names with addresses and vice versa.
+
   
 ## http / https
 [http](https://nodejs.org/api/http.html)
 [https](https://nodejs.org/api/https.html)
+
+
+## Streams
+- stream of data that flow over time from one point to another
+
+## util
+### promisify
+converts a callback based function into promise based one. useful for native node moudles 
+```js
+const { promisify } = require('util');
+
+const fs = require('fs');
+const readFileAsync = promisify(fs.readFile);
+
+async function main() {
+    try {
+        const text = await readFileAsync(filePath, {encoding: 'uft8'}); 
+        console.log('ERROR', err);
+    } catch (err) {
+        console.err('Error:', err);
+    }
+} 
+``` 
+
+
 
 
 # npm Commands
