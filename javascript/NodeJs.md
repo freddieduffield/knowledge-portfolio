@@ -36,6 +36,17 @@ node internal module for domain name resolution
 ## Streams
 - stream of data that flow over time from one point to another
 
+## Server
+
+[listen](https://nodejs.org/api/net.html#net_server_listen_port_host_backlog_callback)
+
+* `port` <number>
+* `host` <string>
+* `backlog` <number>
+* `callback`
+
+Start TCP server listening for connections on the given `port` and `host`. if Port omitted or is 0 the operating system will assign a random unused port, can be retrieved with `server.address.port()` after the listening event has been emitted.
+
 ## util
 ### promisify
 converts a callback based function into promise based one. useful for native node moudles 
