@@ -347,6 +347,8 @@ when tests running in watch mode press `p` and enter the regex for the file you 
 
 `toHaveBeenNthCalledWith(1, 'argument1, 'argument2')`
 
+`toMatchObject()` - match subset of object
+
 ### Selectors
 
 [api queries](https://testing-library.com/docs/dom-testing-library/api-queries/)
