@@ -22,6 +22,8 @@
 
 `-v` - at end, get details
 
+`-o /path/to/file` - output to file
+
 `| jq` - prettify a json response (requires jq to be installed)   
 
 ## `dig`

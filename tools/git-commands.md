@@ -62,6 +62,12 @@ compare a file on different two branches
 git diff mybranch master -- myfile.js
 ```
 
+compare local and remote branch
+
+```
+Git diff remotes/name-of-branch name-of-branch
+```
+
 When there has been a revert compare the original and revert
 
 ```
@@ -101,7 +107,11 @@ git merge --abort
 brings branch upto date with specificed branch. eg. adds changes made on feature branch to the end of the changes made to master.
 
 ```
-git rebase master
+git rebase main
+```
+after rebase you need force push, using force with lease checks for changes by other team members on the same branch
+```
+git push --force-with-lease
 ```
 ---
 ## Reset

@@ -1,5 +1,7 @@
 ## EC2
 
+* resource: [Compare EC2 instances](https://instances.vantage.sh/)
+
 - Renting virtual machines (EC2)
 - Storing data on virtual drives (EBS)
 - Distributing load across machines (ELB)
