@@ -52,3 +52,7 @@ val schema = StructType(List(
                         StructField("error", StringType, true)
 ))
 ```
+
+## Helpers
+
+`.show(false)` - show full results without truncating 
