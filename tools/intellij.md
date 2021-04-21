@@ -36,13 +36,17 @@
 
 `shift + f6` : refactor > rename
 
-`cmd + opt + \`` : next project window
+`cmd + opt + \` : next project window
+
+`cmd + ,` : preferences.
 
 ## 1: Project  
 
 `f6` - move
 
 `shift + f6` - refactor > rename
+
+`cmd + ;` project structure settings
 
 4: run
 

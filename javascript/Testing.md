@@ -11,6 +11,148 @@ At some point, test may have a lot of setup shared between tests. The idea of cr
 
 ## Static Analysis Testing
 
+### TLDR:
+
+```shell script
+npm install --save-dev @babel/cli @babel/core @babel/preset-env @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier husky lint-staged npm-run-all prettier typescript jest
+```
+
+`package.json`
+```json
+{
+  "name": "project name",
+  "private": true,
+  "author": "Freddie Duffield",
+  "license": "",
+  "scripts": {
+    "test": "jest .",
+    "build": "babel src --out-dir dist",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "check-types": "tsc",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "validate": "npm-run-all --parallel check-types check-format lint build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3"
+  }
+}
+```
+
+`.babelrc`
+```json
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "10"
+        }
+      }
+    ]
+  ]
+}
+```
+
+`.eslintrc`
+
+```json
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint-config-prettier",
+    "eslint-config-prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "strict": ["error", "never"]
+  },
+  "env": {
+    "browser": true
+  }
+}
+```
+`.gitignore`
+```
+node_modules
+dist
+```
+`.huskyrc`
+```json
+{
+  "hooks": {
+    "pre-commit": "npm run check-types && lint-staged"
+  }
+}
+```
+`.lintstagedrc`
+
+```json
+{
+  "*.js": [
+    "eslint"
+  ],
+  "*.+(js|json|ts)": [
+    "prettier --write",
+    "git add"
+  ]
+}
+```
+`.prettierrc`
+
+```json
+{
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "always",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false
+}
+```
+`tsconfig.json` 
+```json
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "baseUrl": "./src"
+  }
+}
+```
+
 ### Eslint
 
 save as dev dependency

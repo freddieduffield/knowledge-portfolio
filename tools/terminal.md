@@ -1,5 +1,8 @@
 # Terminal 
 
+`ps aux`
+*create a bash script* 
+
  ## `cat`
 * show contents of a small file 
   ```Bash
@@ -120,6 +123,9 @@ touch <name>
 
 `u` - undo
 
+`:set nu` - show line numbers
+
 `:x` - save and quit
 
 `:wq` - write quit
+

@@ -1,8 +1,10 @@
-# Classes and Objects
+# Everything I Know about Object Oriented Programming in Java
+
+## Classes and Objects
 
 `Class` is a blueprint to construct objects
 
-**State** - things the object Knows
+**State** - things the object Knows - the properties it has. 
 
 * variables -
   - variables must have `type` and `name`
@@ -12,14 +14,13 @@
 
 declaration → `int score = 509;` ← assignment
 
-- instance variables defined at the top class
+- instance variables defined at the top class, can also be called the class' properties or fields. 
 - local variables - local to method, doesn't exist after execution
 
 **Behaviour** - things the object does
 
 * methods aka functions. A reusable callable piece of code that are attached to a class. 
 
-### example.
 ```java
 Class Rectangle {
   private int width; // ⬅️ instance variables
@@ -95,3 +96,11 @@ You can have multiple constructors, with the same name but with different number
 * **`super()`** calls parent constructor
   * must be first statement
 * constructor can have calls to both `super()` and `this()`
+
+## Four Pillars of OOP
+There are four core concepts central to OOP: 
+1. Inheritance - Eliminate redundent code 
+2. Encapsulation - group related variables and functions together. increase reusability 
+3. Polymorphism - create multiple object. 
+4. Abstraction - Hide details and complexity - isolate impact of changes
+

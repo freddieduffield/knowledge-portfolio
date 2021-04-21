@@ -204,3 +204,81 @@ function generateError(message: string, code: number): never {
     throw { message, errorCode: code }
 }
 ```
+
+## Classes
+```typescript
+class Album {
+    name: string;
+    private trackList: string[];
+    protected artist: string;
+    
+    constructor(private readonly id: string, public name: string, artist: string) {
+        this.trackList = [];
+        this.artist = artist
+    }
+    
+    describe(this: Album) {
+        console.log(`Album: ${this.id} ${this.name} by ${this.artist}`);
+    }
+    
+    get currentTrack(index: number) {
+        this.trackList[index];
+    }
+}
+```
+
+* Access modifiers: `private` / `public` / `protected` (overriding)
+*  `readonly` 
+* `constructor` & `super` - shorthand initializer
+* passing `this: <T>` as params
+* `get` / `set`
+* `extends`
+* `static` methods and properties
+* `abstract` - force all inheriting classes to provide an implementation or value. if a class can instatiate 
+* private constructors / singleton instance. 1 object from a class. 
+
+## interface
+Used to define a structure of an object and define the typing. Could be replaced with just `type`. Difference, interface clearer because it only defines an object. 
+
+```typescript
+interface Person {
+    name: string; 
+    age: number;
+    
+    greet(phrase: string): void; 
+}
+
+let user1: Person;
+
+user1 = { 
+    name: 'max',
+    age: '13',
+    greet(phrase: string) {
+        console.log(phrase); 
+    }
+}
+```
+
+It is a contract, that a class must be implement. Can implement multiple classes.
+
+```typescript
+class Person implements Greetable {
+// ... name / age / greet
+}
+``` 
+* `readonly` properties can be added to interfaces, it means a property can't be changed after instantiation. 
+* `interface` can be extended with `extends` to combine with other interfaces
+
+interface can be used to defined function types. 
+```typescript
+interface AddFn {
+    (a: number, b: number): number;
+}
+```
+
+* optional properties `?` after name 
+ ```typescript
+interface Person {
+    name?: string; 
+}
+```

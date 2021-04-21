@@ -55,4 +55,40 @@ val schema = StructType(List(
 
 ## Helpers
 
-`.show(false)` - show full results without truncating 
+`.show(false)` - show full results without truncating
+
+
+```scala
+StructField("doi",StringType,true),
+                        StructField("fig", StringType, true),
+                        StructField("figureId", StringType, true),
+                        StructField("figureLabel", StringType, true),
+                        StructField("figureCaption", StringType, true),
+                        StructField("figureAltText", StringType, true),
+                        StructField("figureLink", StringType, true),
+                        StructField("error", StringType, true)
+
+val xquery = """
+declare default element namespace "http://www.w3.org/2005/xpath-functions";
+
+let $doi := string(/*:article/*:front/*:article-meta/*:article-id[@pub-id-type="doi"])
+let $figureId :=string(/*:article/:*/:*fig/@id)
+let $figureLabel :=string(/*:article//*:fig/*:label)
+let $figureCaption :=string(/*:article//*:fig/*:caption/*:p)
+let $figureAltText :=string(/*:article//*:article)
+let $figureLink :=string(/*:article//*:fig/*:graphic/*:@xlink:hrefp)
+
+let $retval :=
+  <map>
+    <string key="doi">{$doi}</string>
+    <string key="fig">{$fig}</string>
+    <string key="figureId">{$figureId}</string>
+    <string key="figureLabel">{$figureLabel}</string>
+    <string key="figureCaption">{$figureCaption}</string>
+    <string key="figureAltText">{$figureAltText}</string>
+    <string key="figureLink">{$figureLink}</string>
+  </map>
+  
+return xml-to-json($retval)
+"""
+``` 
