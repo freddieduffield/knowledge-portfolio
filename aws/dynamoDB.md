@@ -116,4 +116,5 @@ eg. `user_id` & `game_id`
 ## Resources 
 
 ####[Choosing the right partition key](https://aws.amazon.com/blogs/database/choosing-the-right-dynamodb-partition-key/)
+####[Dynamodb no bad queries](https://www.alexdebrie.com/posts/dynamodb-no-bad-queries/)
 
