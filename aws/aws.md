@@ -87,3 +87,7 @@ Provides data and actionable insights to monitor applications.
 ## AppSync
 
 helps create flexible api to get data to your app using graphQL
+
+### Service Quotas
+AWS account limits for each service, region specific, some can change others can't. 
+[https://console.aws.amazon.com/servicequotas/home/](https://console.aws.amazon.com/servicequotas/home/?#) 

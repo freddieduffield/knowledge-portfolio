@@ -643,6 +643,8 @@ DEBUG=nock.*
 
 ## Enzyme
 
+`.hostNodes()` - returns a new wrapper with host nodes which HTML elements as opposed to react components. 
+
 .filterWhere()
 
 ## React Testing Library

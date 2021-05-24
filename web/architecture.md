@@ -28,5 +28,19 @@ communication directly with requests
 - service emits event 
 - event bus routes to required services
 
+### Event Driven Architecture
+
+AWS Event Bridge. - Publish and subscribe model. An event emitted and other services respond accordingly. removes HTTP calls among services.
+
+CAP
+BASE
+
+[https://dev.to/aws-heroes/refactoring-a-distributed-monolith-to-microservices-1g02](https://dev.to/aws-heroes/refactoring-a-distributed-monolith-to-microservices-1g02)
+
+[https://dev.to/sosnowski/anatomy-of-aws-lambda-1i1e](https://dev.to/sosnowski/anatomy-of-aws-lambda-1i1e)
+# What is S3?
+# What is the difference between lambda and EC2
+# Can lambda autoscale / load balancing?
+
 
 
