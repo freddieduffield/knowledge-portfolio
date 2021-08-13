@@ -2,8 +2,18 @@
 
 ```
 npx create-react-app <app-name>
+
+// typescript
+npx create-react-app <app-name> --template typescript
+
 ```
-## setState
+
+## Patterns and best practices
+### [High order components](https://reactjs.org/docs/higher-order-components.html)
+
+---
+## API
+### setState
 
 - `setState` is asynchronous 
 
@@ -16,7 +26,7 @@ this.setState(
   )
 ```
 
-## React.Children 
+### React.Children 
 
 utilities to deal with `this.props.children`
 
@@ -24,7 +34,7 @@ utilities to deal with `this.props.children`
 React.Children.map(children, function[(thisArg)])
 ```
 
-## React.cloneElement 
+### React.cloneElement 
 
 ```JS
 React.cloneElement(
@@ -34,7 +44,7 @@ React.cloneElement(
 )
 ```
 
-## PropTypes
+### PropTypes
 
 ```js
 

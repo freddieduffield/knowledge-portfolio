@@ -17,6 +17,10 @@
 
 `SSL certificate` - 
 
+`STDOUT` - standard output
+
+`stdin` - standard input
+
 `URN` : Uniform Resource Name - subset URI - completely different to `URL` and doesn't contain a protocol - eg. issn
 
 `URI` : Uniform Resource Identifer 

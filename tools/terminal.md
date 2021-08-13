@@ -1,4 +1,50 @@
 # Terminal 
+## command structure
+
+```
+command -options arguments
+```
+
+`options` 
+- case sensitive, mean different things. Turn things on and off for commands.
+- can be chained eg. `ncal -3h`
+
+## man pages
+```
+man command
+```
+displayed using `less`
+
+`space` - scroll page
+
+`q` - quit
+
+`b` - for back
+
+`h` - help
+
+`/` - search 
+
+**synopis**
+`[]` - optional
+
+## Types of command
+
+```
+type command
+```
+
+- executable program (stored in /bin derivitive)
+- built in shell command
+- shell function
+- alias 
+
+```
+which
+```
+where a command is located
+
+
 
 `ps aux`
 *create a bash script* 
